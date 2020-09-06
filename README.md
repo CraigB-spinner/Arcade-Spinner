@@ -16,3 +16,29 @@ Arcade Box: https://www.amazon.ca/gp/product/B07HRS9BFK/ref=ppx_yo_dt_b_asin_ima
 You will also need the Arduino joystick library available at: https://github.com/MHeironimus/ArduinoJoystickLibrary
 
 This device will be detected as both a mouse and a joystick/gamepad. The joystick only has X and Y axes which we don't use. At least one axis is needed by the library to declare the joystick and it was found that 2 were required for the controller to be detected on some systems (RetroPi). We just center the X and Y axes in setup() and forget about them. The spinner controls the mouse X axis which is by default mapped to the analog dial in MAME (don't forget to enable the mouse in MAME under advanced options!). The buttons will work as regular gamepad/joystick buttons. The 2400 different positions (transitions) that can be detected on the 600ppr(pulse per revolution) encoder I'm using are way too many for our purposes so they are halved in the code to 1200. The code uses the Atmega32u4 ports directly because that's faster than using digitalRead/Write. I'm not doing any debouncing of the buttons or encoder as it seems to work great for me as is, but you might want to add debouncing depending on your hardware.
+
+Extra info:
+Wiring: 
+Vcc (+5V) and Gnd
+Spinner A & B rotary output wires red and green. see picture 
+I advise you double check Vcc(5-24v power - Wht) and Gnd(Blk) wire colours as some chinese factories are colour blind.
+Buttons 1-6, plus 9-select(coin), and 10-start(player) 
+Pin Button/wire
+2   A spinner
+3   B spinner
+4   Button 1 - X
+5   Button 2 - A
+6   Button 3 - B
+7   Button 4 - Y
+8   Button 5 - L
+9   Button 6 - R
+10  Button 9 - Select
+15  Button 10 - Start
+Gnd Gnd
+Vcc +5v
+
+I am using Xbox A/B, X/Y configuration, Nintendo protocol is B/A, Y/X reversed controls (Japanese cultural differences)
+You can assign buttons to any assignment in RetroArch but it is best to pick a consistent pattern across all controllers to avoid confusion.
+ 
+  
+  
