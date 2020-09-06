@@ -39,5 +39,10 @@ Gnd |Gnd
 Vcc |+5v  <br/>
 
 I am using Xbox A/B, X/Y configuration, Nintendo protocol is B/A, Y/X reversed controls (Japanese cultural differences)  
-You can assign buttons to any assignment in RetroArch but it is best to pick a consistent pattern across all controllers to avoid confusion.
+You can assign buttons to any assignment in RetroArch but it is best to pick a consistent pattern across all controllers to avoid confusion.  <br/>
  
+**Extra expenses:**  
+Dupont connectors 2.54mm pitch JST SM kit (requires special crimper)  
+or female Dupont pre-wired bundles with spare wire 24-28AWG (stranded wire for flexiblity)  
+Sanwa - 2.8mm(0.110") or Suzo-Happ - 4.8mm(0.187") female spade crimp connectors for arcade button ends 
+<br/>
