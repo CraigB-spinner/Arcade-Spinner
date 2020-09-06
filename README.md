@@ -35,7 +35,7 @@ Pin |Button/wire
 10  |Button 9 - Select
 15  |Button 10 - Start
 Gnd |Gnd
-Vcc |+5v<br/><br/>
+Vcc |+5v  <br/>
 
 I am using Xbox A/B, X/Y configuration, Nintendo protocol is B/A, Y/X reversed controls (Japanese cultural differences)  
 You can assign buttons to any assignment in RetroArch but it is best to pick a consistent pattern across all controllers to avoid confusion.
