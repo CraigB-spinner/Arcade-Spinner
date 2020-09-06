@@ -20,6 +20,7 @@ This device will be detected as both a mouse and a joystick/gamepad. The joystic
 Wiring: <br/>
 Vcc (+5V) and Gnd<br/>
 Spinner A & B rotary output wires red and green. see picture <br/>
+Note: resistor used in series to limit current around 10mA (390Ω	- 470Ω)  
 I advise you double check Vcc(5-24v power - Wht) and Gnd(Blk) wire colours as some chinese factories are colour blind.<br/>
 Buttons 1-6, plus 9-select(coin), and 10-start(player)<br/>
 Pin |Button/wire
@@ -40,5 +41,3 @@ Vcc |+5v  <br/>
 I am using Xbox A/B, X/Y configuration, Nintendo protocol is B/A, Y/X reversed controls (Japanese cultural differences)  
 You can assign buttons to any assignment in RetroArch but it is best to pick a consistent pattern across all controllers to avoid confusion.
  
-  
-  
