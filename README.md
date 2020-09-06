@@ -45,4 +45,5 @@ You can assign buttons to any assignment in RetroArch but it is best to pick a c
 Dupont connectors 2.54mm pitch JST SM kit (requires special crimper)  
 or female Dupont pre-wired bundles with spare wire 24-28AWG (stranded wire for flexiblity)  
 Sanwa - 2.8mm(0.110") or Suzo-Happ - 4.8mm(0.187") female spade crimp connectors for arcade button ends 
-<br/>
+<br/><br/>
+**For the more observant** in pictures "Inside Spaghetti" and "Arduino Beauty Shot" there's an extra wire hareness and aligator clip hooking to Gnd. TX0 & RX1 are wired to the y-axis of a proto-type [Trackball](https://www.amazon.ca/gp/product/B00F1YQH6G/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1). Arduino code has been modified, tested and confirmed to work. No stutter or lag as using only USB protocol to RetroPi. No PS/2 Protocol overhead. I will be working on enclosure to finish new controller for games like **Centipede**, **Marble Madness**, **Crystal Castles**, and others.  
