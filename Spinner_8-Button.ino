@@ -1,6 +1,11 @@
-/*   Arcade Spinner v0.5
+/*   Arcade Spinner v2.01
 *    Copyright 2018 Joe W (jmtw000 a/t gmail.com)
-*                   Craig B - Updated code for mouse movement and case statement for Button port bit validation
+*                   Craig B - based on Spinner code from early June 2019 
+*                   Craig B - Updated code from late June 2019, 
+*                             Added spinner movement ACCM/DROP, 
+*                             Optimized code speed by changing if logic to case statement logic for Button validation of port bits.
+*                   Craig B - Added code for spinner movement NORM/ACCS/ACCX, RetroPi fix - July 2019         
+*                   Craig B - Added code for spinner axis change from early Sept 2020   
 *    
 *    This program is free software: you can redistribute it and/or modify
 *    it under the terms of the GNU General Public License as published by
@@ -37,6 +42,7 @@
 #define pinA 2    //The pins that the rotary encoder's A and B terminals are connected to.
 #define pinB 3
 #define maxBut 10
+#define axisFlip 6  //Special flip button (button offset: 0 thru 9) - comment out if 'x/y-axis' feature not required by you.
 
 //Create a Joystick object.
 Joystick_ Joystick(JOYSTICK_DEFAULT_REPORT_ID,JOYSTICK_TYPE_GAMEPAD,
@@ -53,10 +59,16 @@ volatile int previousReading = 0;
 //Keeps track of how much the encoder has been moved
 volatile int rotPosition = 0;
 volatile int rotMulti = 0;
+#ifdef axisFlip
+volatile int xAxis = 1; 
+volatile int yAxis = 0; 
 
 // Last state of 10 buttons (update array for your maxBut buttons)
+int lastButtonState[maxBut] = {1,1,1,1,1,1,0,1,1,1};
+#endif
+#ifndef axisFlip
 int lastButtonState[maxBut] = {1,1,1,1,1,1,0,0,1,1};
-
+#endif
 
 
 void setup() {
@@ -64,7 +76,7 @@ void setup() {
   
   //Use internal input resistors for all the pins we're using  
   PORTD = 0b10010011; //Digital pins D2(1), D3(0), D4(4), and D6(7).
-  PORTB = 0b01110010; //Digital pins D8(4), D9(5), D10(6), and D15(1). D14(3), D16(2)
+  PORTB = 0b01110111; //Digital pins D8(4), D9(5), D10(6), and D15(1). D14(3), D16(2) requires PB0 set high(master)
   PORTC = 0b01000000; //Digital pin D5(6)
   PORTE = 0b01000000; //Digital pin D7(6)
 //PORTF = 0b11000000; //Digital pin A0(7) & A1(6). A2(5), A3(4) 
@@ -127,16 +139,25 @@ void pinChange() {
 
 void loop(){ 
   int currentButtonState;
-//int rotMulti;
 
 #ifdef NORM
   //If the encoder has moved 2 or more transitions move the mouse in the appropriate direction 
   //and update the position variable to reflect that we moved the mouse. Smooth movement but lags.
   if(rotPosition >= 2) {
+#ifdef axisFlip
+    Mouse.move(xAxis,yAxis,0);
+#endif 
+#ifndef axisFlip
     Mouse.move(1,0,0);
+#endif 
     rotPosition -= 2;
   } else if(rotPosition <= -2) {
+#ifdef axisFlip
+    Mouse.move(-xAxis,-yAxis,0);
+#endif 
+#ifndef axisFlip
     Mouse.move(-1,0,0);
+#endif 
     rotPosition += 2;
   } 
 #endif 
@@ -145,10 +166,20 @@ void loop(){
   //If the encoder has moved 2 or more transitions move the mouse in the appropriate direction 
   //and update the position variable to reflect that we moved the mouse. Smooth drop extra moves.
   if(rotPosition >= 2) {
+#ifdef axisFlip
+    Mouse.move(xAxis,yAxis,0);
+#endif 
+#ifndef axisFlip
     Mouse.move(1,0,0);
+#endif 
     rotPosition = 0;
   } else if(rotPosition <= -2) {
+#ifdef axisFlip
+    Mouse.move(-xAxis,-yAxis,0);
+#endif 
+#ifndef axisFlip
     Mouse.move(-1,0,0);
+#endif 
     rotPosition = 0;
   } 
 #endif 
@@ -157,7 +188,14 @@ void loop(){
   //If the encoder has moved 1 or more transitions move the mouse in the appropriate direction 
   //and update the position variable to reflect that we moved the mouse. Accelerated move.
   if(rotPosition != 0) {
+#ifdef axisFlip
+    int x = (xAxis) ? rotPosition : 0;
+    int y = (yAxis) ? rotPosition : 0;
+    Mouse.move(x,y,0);
+#endif 
+#ifndef axisFlip
     Mouse.move(rotPosition,0,0);
+#endif 
     rotPosition = 0;
   }
 #endif 
@@ -167,7 +205,14 @@ void loop(){
   //and update the position variable to reflect that we moved the mouse. Accelerated move.
   if(rotPosition >= 2 || rotPosition <= -2) {
     rotMulti = rotPosition >> 1;
+#ifdef axisFlip
+    int x = (xAxis) ? rotMulti : 0;
+    int y = (yAxis) ? rotMulti : 0;
+    Mouse.move(x,y,0);
+#endif 
+#ifndef axisFlip  
     Mouse.move(rotMulti,0,0);
+#endif 
     rotPosition -= (rotMulti << 1);
   }
 #endif 
@@ -177,7 +222,14 @@ void loop(){
   //and update the position variable to reflect that we moved the mouse. Accelerated move.
   if(rotPosition >= 4 || rotPosition <= -4) {
     rotMulti = rotPosition >> 2;
+#ifdef axisFlip
+    int x = (xAxis) ? rotMulti : 0;
+    int y = (yAxis) ? rotMulti : 0;
+    Mouse.move(x,y,0);
+#endif 
+#ifndef axisFlip
     Mouse.move(rotMulti,0,0);
+#endif 
     rotPosition -= (rotMulti << 2);
   }
 #endif 
@@ -210,6 +262,14 @@ void loop(){
       case 5:  //on digital pin 9, PB5 - Arcade Button 6
         currentButtonState = (PINB & 0b00100000) >> 5;
         break;
+#ifdef axisFlip
+      case 6:  //on digital pin 16, PB2 - Special Axis Button (internal function) - requires PB0 set to master or high
+        currentButtonState = (PINB & 0b00000100) >> 2;
+        break; 
+#endif
+//      case 7:  //on digital pin 14, PB3 - 2nd Special Button 
+//        currentButtonState = (PINB & 0b00001000) >> 3;
+//        break; 
       case 8:  //on digital pin 10, PB6 - COIN/Select Button 9
         currentButtonState = (PINB & 0b01000000) >> 6;
         break;
@@ -220,9 +280,16 @@ void loop(){
         currentButtonState = 0b00000000;
         break;
     }
+
     //If the current state of the pin for each button is different than last time, update the joystick button state
     if(currentButtonState != lastButtonState[button])
-      Joystick.setButton(button, !currentButtonState);
+#ifdef axisFlip
+      if (button == axisFlip ) { //change x/y axis
+        xAxis = !xAxis;
+        yAxis = !yAxis;
+      } else
+#endif
+        Joystick.setButton(button, !currentButtonState);
       
     //Save the last button state for each button for next time
     lastButtonState[button] = currentButtonState;
