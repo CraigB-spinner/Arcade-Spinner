@@ -41,6 +41,21 @@ Pin |Button/wire
 Gnd |Gnd
 Vcc |+5v  <br/>
 
+Pin |Data |Button/wire  |Code  
+--- |---- |------------ |----  
+2   |D2   |X<sub>A</sub> spinner - Red |PinA  
+3   |D3   |X<sub>B</sub> spinner - Green |PinB  
+4   |D4   |Button 1 - X
+5   |D5   |Button 2 - A
+6   |D6   |Button 3 - B
+7   |D7   |Button 4 - Y
+8   |D8   |Button 5 - L
+9   |D9   |Button 6 - R
+10  |D10  |Button 9 - Select
+15  |D15  |Button 10 - Start
+Gnd |     |Gnd - Black/Blk
+Vcc |     |+5v - Red/White  <br/>
+
 I am using Xbox A/B, X/Y configuration, Nintendo protocol is B/A, Y/X reversed controls (Japanese cultural differences)  
 You can assign buttons to any assignment in RetroArch but it is best to pick a consistent pattern across all controllers to avoid confusion.  <br/>
  
