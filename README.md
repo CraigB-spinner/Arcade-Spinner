@@ -26,20 +26,6 @@ Spinner A & B rotary output wires red and green. see picture <br/>
 Note: resistor used in series to limit current around 10mA (390Ω	- 470Ω)  
 I advise you double check Vcc(5-24v power - Wht) and Gnd(Blk) wire colours as some chinese factories are colour blind.<br/>
 Buttons 1-6, plus 9-select(coin), and 10-start(player)<br/>
-Pin |Button/wire
---- |-----------
-2   |A spinner
-3   |B spinner
-4   |Button 1 - X
-5   |Button 2 - A
-6   |Button 3 - B
-7   |Button 4 - Y
-8   |Button 5 - L
-9   |Button 6 - R
-10  |Button 9 - Select
-15  |Button 10 - Start
-Gnd |Gnd
-Vcc |+5v  <br/>
 
 Pin |Data |Button/wire  |Code  
 --- |---- |------------ |----  
