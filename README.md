@@ -10,7 +10,6 @@ This is an Arduino Pro Micro clone, arcade spinner, with 8 buttons (up to 10) fo
 
 To construct this you will need a 2-phase rotary encoder which can operate at 5v and some momentary switch buttons plus Arduino micro controller.<br/> 
 [**Rotary encoder** used](https://www.amazon.ca/gp/product/B00IJ788AA/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1)<br/>
-However, any 2-phase 5v one should work. You can even use the little 20-30 position encoders that come with a lot of Arduino kits, although you'll have to alter the code and I don't recommend using those.<br/> 
 [**Wheel** used](https://www.amazon.ca/gp/product/B07DPDJHR6/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1)<br/>
 [**ATmega32U4** used](https://www.amazon.ca/gp/product/B01N4TVIQX/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)<br/> 
 [**Arcade Box** used](https://www.amazon.ca/gp/product/B07HRS9BFK/ref=ppx_yo_dt_b_asin_image_o01_s00?ie=UTF8&psc=1)<br/><br/>
