@@ -21,7 +21,7 @@ This device will be detected as both a mouse and a joystick/gamepad. The joystic
 **Extra info:**<br/>
 Wiring: <br/>
 Vcc (+5V) and Gnd<br/>
-Spinner A & B rotary output wires red and green. [see picture](Inside%20guts%20of%20spinner.jpg) <br/>
+Spinner A & B rotary output wires red and green. [see picture](Pics/Inside%20guts%20of%20spinner.jpg) <br/>
 Note: resistor used in series to limit current around 10mA (390Ω	- 470Ω)  
 I advise you double check Vcc(5-24v power - Wht) and Gnd(Blk) wire colours as some chinese factories are colour blind.<br/>
 Buttons 1-6, plus 9-select(coin), and 10-start(player)<br/>
