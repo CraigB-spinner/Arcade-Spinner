@@ -1,5 +1,6 @@
 # Arcade-Spinner
 Arcade Spinner version 2 - based off earlier 'jmtw000' version <br/><br/>
+![Spinner](Pics/IMG_3830.jpg)  
 I decided to post my version of code including 'compiler control directive code' for rotary encoder (spinner) movement, and addition of extra buttons that a standard fight box had pre-configured cut holes (6-30mm & 2-24mm). The code works with Arduino Pro Micro style boards made by clone manufacturers. The original code posted by 'jmtw000' has mutated to be used with Arduino Micro, Adafruit Itsy Bitsy, and other style boards that have extra pinouts unused by status LEDs. You will not find pins 11, 12, and 13 on an  Arduino [Pro Micro](Pics/Arduino%20Pro%20Micro%20Atmega32u4.jpg) board but pins 14, 15, and 16. They appear to be mapped to different ATMega Portx bits.<br/><br/>
 **Sept. 5/20** Uploaded my version of code from 2019; sourced June 27/19 and modified/optimized/bug fixed during summer 2019.<br/>
 **Sept. 11/20** Uploaded revised code to allow switching of Spinner's X & Y axis - mod axisFlip directive to setup special button of choice. <br/><br/>
