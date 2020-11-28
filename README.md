@@ -19,7 +19,7 @@ You will also need the Arduino joystick library available at: https://github.com
 This device will be detected as both a mouse and a joystick/gamepad. The joystick only has X and Y axes which we don't use. At least one axis is needed by the library to declare the joystick and it was found that 2 were required for the controller to be detected on some systems (RetroPi). We just center the X and Y axes in setup() and forget about them. The spinner controls the mouse X axis which is by default mapped to the analog dial in MAME (don't forget to enable the mouse in MAME under advanced options!). The buttons will work as regular gamepad/joystick buttons. The 2400 different positions (transitions) that can be detected on the 600ppr(pulse per revolution) encoder I'm using are way too many for our purposes so they are halved in the code to 1200. The code uses the Atmega32u4 ports directly because that's faster than using digitalRead/Write. I'm not doing any debouncing of the buttons or encoder as it seems to work great for me as is, but you might want to add debouncing depending on your hardware.<br/><br/>
 
 **Extra info:**<br/>
-Wiring: <br/>
+Wiring: [see diagram](Pics/Spinner%20Sketch_bb.jpg)<br/>
 Vcc (+5V) and Gnd<br/>
 Spinner A & B rotary output wires red and green. [see picture](Pics/Inside%20guts%20of%20spinner.jpg) <br/>
 Note: resistor used in series to limit current around 10mA (390Ω	- 470Ω)  
