@@ -4,7 +4,7 @@ login: pi
 Password: raspberry *(unless updated by you)*  
 
 **Add:**  
-usbhid.mousepoll=0  
+*usbhid.mousepoll=0*  
 to *cmdline.txt*
 
 `sudo nano /boot/cmdline.txt`  
@@ -14,6 +14,6 @@ This parameter enforces a mouse polling rate of 62.5Hz and reduces any quick mov
 `sudo reboot`
 
 Under Arcade or MAME select your favourite trackball game.  
-TAB to bring up the game menu  
+TAB to bring up the Game Menu  
 Select *Analog Controls*  
 Adjust the *X Sensitivity* & *Y Sensitivity* values 
