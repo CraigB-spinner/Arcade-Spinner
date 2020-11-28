@@ -23,7 +23,8 @@ Wiring: [See diagram](Pics/Spinner%20Sketch_bb.jpg)<br/>
 Vcc (+5V) and Gnd<br/>
 Spinner A & B rotary output wires red and green. [see picture](Pics/Inside%20guts%20of%20spinner.jpg) <br/>
 Note: resistor used in series to limit current around 10mA (390Ω	- 470Ω)  
-I advise you double check Vcc(5-24v power - Wht) and Gnd(Blk) wire colours as some chinese factories are colour blind.<br/>
+I advise you double check Vcc(5-24v power - Wht) and Gnd(Blk) wire colours as some chinese factories are colour blind. <br/> 
+{Alternate wiring: *A-Grn, B-Wht, Vcc-Red, Gnd-Blk*}<br/>
 Buttons 1-6, plus 9-select(coin), and 10-start(player)<br/>
 
 Pin |Data |Button/wire  |Code  
