@@ -1,7 +1,7 @@
 **On your computer,**  
 use program Putty and SSH to your PI's ip address.  
-login: pi  
-Password: raspberry *(unless updated by you)*  
+`login: pi`  
+`Password: raspberry` *(unless updated by you)*  
 
 **Add:**  
 *usbhid.mousepoll=0*  
