@@ -12,8 +12,3 @@ on the same line separated from other stuff by spaces
 This parameter enforces a mouse polling rate of 62.5Hz and reduces any quick movement lag.  
 
 `sudo reboot`
-
-Under Arcade or MAME select your favourite trackball game.  
-TAB to bring up the Game Menu  
-Select *Analog Controls*  
-Adjust the *X Sensitivity* & *Y Sensitivity* values 
