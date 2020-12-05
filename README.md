@@ -42,9 +42,9 @@ Pin |Data |Button/wire  |Code
 Gnd |     |Gnd - Black/Blk
 Vcc |     |+5v - Red/White  <br/>
 
-I am using Xbox A/B, X/Y configuration, Nintendo protocol is B/A, Y/X reversed controls (Japanese cultural differences)  
+I am using Xbox A/B, X/Y configuration, Nintendo protocol is B/A, Y/X reversed controls. (Japanese cultural differences) 
 You can assign buttons to any assignment in RetroArch but it is best to pick a consistent pattern across all controllers to avoid confusion.  
-[Finished Spinner](Pics/CraigB's%20Spinner.jpg) in DIY Fight Stick box  <br/>
+My [Finished Spinner](Pics/CraigB's%20Spinner.jpg) assembled within a DIY Fight Stick box.  <br/>
  
 **Extra expenses:**  
 Dupont connectors 2.54mm pitch JST SM kit (requires special crimper)  
