@@ -50,8 +50,7 @@ My [Finished Spinner](Pics/CraigB's%20Spinner.jpg) assembled within a DIY Fight 
 Dupont connectors 2.54mm pitch JST SM kit (requires special crimper)  
 or female Dupont pre-wired bundles (wire jumper) with spare wire 24-28AWG (stranded wire for flexiblity).  
 Sanwa - 2.8mm(0.110") or Suzo-Happ - 4.8mm(0.187") female spade crimp connectors for arcade button ends.  
-3 - 3x12mm Countersunk Machine Head Screws (sourced from Traxxas 2552 hobby parts); cut to length with dremel;  
-uses same Allen wrench as grub screw within noted wheel.  
+3 - 3x12mm Countersunk Machine Head Screws (sourced from Traxxas 2552 hobby parts); cut to length with dremel; uses same Allen wrench as grub screw within noted wheel.  
 Lexan sheet 0.060" thick, size 95x53mm(3.75x2.1") or aluminum/steel sheet cut to same size of Sanwa JLF-P1 mounting plate. I don't recommend using joystick plate as holes are located at 90° and rotary encoder mounts at 120°.  
 Clear Lexan makes visibility easier for fabrication.<br/><br/>
 
