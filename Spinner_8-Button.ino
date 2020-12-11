@@ -32,6 +32,26 @@
 *    The first two numbers are the vendor ID 16c0 and product ID 05e1.
 */
 
+// Port Bit/Pin layout   
+//      Bit - 76543210 - Silk screen ## - Micro-Controller
+#define xPB3 0b00001000 //Digital Pin 0  - Micro/PRO Micro - RX,  INT2
+#define xPB2 0b00000100 //Digital Pin 1  - Micro/PRO Micro - TX,  INT3
+#define xPB1 0b00000010 //Digital Pin 2  - Micro/PRO Micro - SDA, INT0
+#define xPB0 0b00000001 //Digital Pin 3  - Micro/PRO Micro - SCL, INT1
+#define xPD4 0b00010000 //Digital Pin 4  - Micro/PRO Micro
+#define xPC6 0b01000000 //Digital Pin 5  - Micro/PRO Micro
+#define xPD7 0b10000000 //Digital Pin 6  - Micro/PRO Micro
+#define xPE6 0b01000000 //Digital Pin 7  - Micro/PRO Micro
+#define xPB4 0b00010000 //Digital Pin 8  - Micro/PRO Micro
+#define xPB5 0b00100000 //Digital Pin 9  - Micro/PRO Micro
+#define xPB6 0b01000000 //Digital Pin 10 - Micro/PRO Micro
+#define xPB7 0b10000000 //Digital Pin 11 - Micro
+#define xPD6 0b01000000 //Digital Pin 12 - Micro
+#define xPC7 0b10000000 //Digital Pin 13 - Micro
+#define xPB3 0b00001000 //Digital Pin 14 - PRO Micro
+#define xPB1 0b00000010 //Digital Pin 15 - PRO Micro
+#define xPB2 0b00000100 //Digital Pin 16 - PRO Micro
+    
 //Mouse movement - pick one to compile specific code inside loop()
 //#define NORM   //Mouse movement Normal; every interrupt processed; maybe lag in fast movement, 2 pulse = 2 move
 //#define DROP   //Mouse movement Drop; drop extra interrupts processed; smooth movement, no lag, 2 - 2n+1 pulse = 1 move
@@ -245,40 +265,40 @@ void loop(){
   do {
     switch ( button ) {
       case 0:  //on digital pin 4, PD4 - Arcade Button 1
-        currentButtonState = (PIND & 0b00010000) >> 4;
+        currentButtonState = (PIND & xPD4) >> 4;
         break;
       case 1:  //on digital pin 5, PC6 - Arcade Button 2
-        currentButtonState = (PINC & 0b01000000) >> 6;
+        currentButtonState = (PINC & xPC6) >> 6;
         break;
       case 2:  //on digital pin 6, PD7 - Arcade Button 3
-        currentButtonState = (PIND & 0b10000000) >> 7;
+        currentButtonState = (PIND & xPD7) >> 7;
         break;
       case 3:  //on digital pin 7, PE6 - Arcade Button 4
-        currentButtonState = (PINE & 0b01000000) >> 6;
+        currentButtonState = (PINE & xPE6) >> 6;
         break;
       case 4:  //on digital pin 8, PB4 - Arcade Button 5
-        currentButtonState = (PINB & 0b00010000) >> 4;
+        currentButtonState = (PINB & xPB4) >> 4;
         break;
       case 5:  //on digital pin 9, PB5 - Arcade Button 6
-        currentButtonState = (PINB & 0b00100000) >> 5;
-        break;
+        currentButtonState = (PINB & xPB5) >> 5;
+        break;      
 #ifdef axisFlip
       case 6:  //on digital pin 16, PB2 - Special Axis Button (internal function) - requires PB0 set to master or high
-        currentButtonState = (PINB & 0b00000100) >> 2;
+        currentButtonState = (PINB & xPB2) >> 2;
         break; 
 #endif
 //      case 7:  //on digital pin 14, PB3 - 2nd Special Button 
-//        currentButtonState = (PINB & 0b00001000) >> 3;
+//        currentButtonState = (PINB & xPB3) >> 3;
 //        break; 
       case 8:  //on digital pin 10, PB6 - COIN/Select Button 9
-        currentButtonState = (PINB & 0b01000000) >> 6;
+        currentButtonState = (PINB & xPB6) >> 6;
         break;
       case 9:  //on digital pin 15, PB1 - PLAYER/Start Button 10
-        currentButtonState = (PINB & 0b00000010) >> 1;
+        currentButtonState = (PINB & xPB1) >> 1;
         break; 
       default: //Extra digital pins 16, PB2 and 14, PB3
         currentButtonState = 0b00000000;
-        break;
+        break;      
     }
 
     //If the current state of the pin for each button is different than last time, update the joystick button state
