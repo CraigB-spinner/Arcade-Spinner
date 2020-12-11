@@ -5,7 +5,7 @@
 *                             Added spinner movement ACCM/DROP, 
 *                             Optimized code speed by changing if logic to case statement logic for Button validation of port bits.
 *                   Craig B - Added code for spinner movement NORM/ACCS/ACCX, RetroPi fix - July 2019         
-*                   Craig B - Added code for spinner axis change from early Sept 2020   
+*                   Craig B - Added code for spinner axis change from early Sept 2020    
 *    
 *    This program is free software: you can redistribute it and/or modify
 *    it under the terms of the GNU General Public License as published by
