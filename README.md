@@ -48,7 +48,7 @@ My [Finished Spinner](Pics/CraigB's%20Spinner.jpg) assembled within a DIY Fight 
 <br/>
 **The Code:**<br/>
 There are two versions of code: Pick your code to use
-- Standard Mouse and Joystick buttons version, or  
+- Standard Mouse and Joystick buttons version  
   - Spinner_8-Button.ino
 - Special Mouse only version with & without Mouse buttons - no Joystick buttons  
   - Spinner_L-C-R-Button_Special.ino
