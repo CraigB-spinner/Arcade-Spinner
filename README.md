@@ -44,7 +44,7 @@ Vcc |     |+5v - Red/White  <br/>
 
 I am using Xbox A/B, X/Y configuration, Nintendo protocol is B/A, Y/X reversed controls. (Japanese cultural differences) 
 You can assign buttons to any assignment in RetroArch but it is best to pick a consistent pattern across all controllers to avoid confusion.  
-
+My [Finished Spinner](Pics/CraigB's%20Spinner.jpg) assembled within a DIY Fight Stick box.  <br/>
 **The Code:**<br/>
 There are two versions of code:
 - Standard Mouse and Joystick buttons version, or  
@@ -53,8 +53,6 @@ There are two versions of code:
 Pick your code to use:  
 Spinner_8-Button.ino or Spinner_L-C-R-Button_Special.ino  
 
-My [Finished Spinner](Pics/CraigB's%20Spinner.jpg) assembled within a DIY Fight Stick box.  <br/>
- 
 **Extra expenses:**  
 Dupont connectors 2.54mm pitch JST SM kit (requires special crimper)  
 or female Dupont pre-wired bundles (wire jumper) with spare wire 24-28AWG (stranded wire for flexiblity).  
