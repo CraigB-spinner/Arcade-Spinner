@@ -47,8 +47,8 @@ You can assign buttons to any assignment in RetroArch but it is best to pick a c
 
 **The Code:**<br/>
 There are two versions of code:  
-Standard Mouse and Joystick buttons version,  
-or Special Mouse only version with & with Mouse buttons - no Joystick buttons.  
+- Standard Mouse and Joystick buttons version, or  
+- Special Mouse only version with & without Mouse buttons - no Joystick buttons.  
 Pick your code to use:  
 Spinner_8-Button.ino or Spinner_L-C-R-Button_Special.ino  
 
