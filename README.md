@@ -46,9 +46,10 @@ I am using Xbox A/B, X/Y configuration, Nintendo protocol is B/A, Y/X reversed c
 You can assign buttons to any assignment in RetroArch but it is best to pick a consistent pattern across all controllers to avoid confusion.  
 
 **The Code:**<br/>
-There are two versions of code:  
+There are two versions of code:
 - Standard Mouse and Joystick buttons version, or  
 - Special Mouse only version with & without Mouse buttons - no Joystick buttons.  
+
 Pick your code to use:  
 Spinner_8-Button.ino or Spinner_L-C-R-Button_Special.ino  
 
