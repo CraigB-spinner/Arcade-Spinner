@@ -99,7 +99,7 @@ void setup() {
   //Use internal input resistors for all the pins we're using - pull high resistor, when button pressed (short to ground) input on pin is pulled low.
   //Digital pin D# corresponds to silk screen on micro-controller board, (#) corresponds to port bit internal use MSD(7)-to-LSD(0) - you assign button # in code 
 #ifdef JustSpin
-  PORTD = 0b10010011; //Digital pins D2(1), D3(0)
+  PORTD = 0b00000011; //Digital pins D2(1), D3(0)
 #endif
 #ifndef JustSpin
   PORTD = 0b10010011; //Digital pins D2(1), D3(0), D4(4), and D6(7). (Button Left and Right)
