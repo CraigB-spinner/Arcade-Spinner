@@ -6,7 +6,8 @@ I decided to post my version of code including 'compiler control directive code'
 A simplified chinese knock-off Rotary Encoder of an industrial Omron E6B2-CWZ6C encoder costing hundreds can be obtained from online stores around $30. Investigate purchase wisely as quality and standardization may vary. Ditto for selection of Arduino Pro Micro boards compatible to Sparkfun board, making sure you get 5V/16MHz version with pre-installed bootloader and pin headers. An USB 2.0 type A-to-MicroB cable of 3 to 6 feet will be needed, and not a two conductor charge cable.<br/><br/>
 **Sept. 5/20**  Uploaded my version of code from 2019; sourced June 27/19 and modified/optimized/bug fixed during summer 2019.<br/>
 **Sept. 11/20** Uploaded revised code to allow switching of Spinner's X & Y axis - mod axisFlip directive to setup special button of choice. <br/>
-**Dec. 11/20**  Uploaded new code for Mouse only Spinner operation. Note: all buttons can be inactivated for Spinner-Only operation.<br/><br/>
+**Dec. 11/20**  Uploaded new code for Mouse only Spinner operation. Note: all buttons can be inactivated for Spinner-Only operation.  
+**Dec. 16/20**  Uploaded new code for override Joystick directions mod (using buttons for menu)<br/><br/>
 Updated readme from 'jmtw000' version with different component list...
 
 This project uses an Arduino Pro Micro clone, arcade spinner, with 8 buttons (up to 10). It maybe used with MAME or any other emulator which can use the X axis of the mouse as a paddle/spinner controller. The code should work on any board which uses the ATmega32U4 as long as the port pins are mapped to the same "digital pins". The spinner was created because it was a cheaper alternative to commercially available ones. I find it works well for ball and paddle games, like Tempest, and also makes a decent controller for driving games.
@@ -49,11 +50,13 @@ You can assign buttons to any assignment in RetroArch but it is best to pick a c
 My [Finished Spinner](Pics/CraigB's%20Spinner.jpg) assembled within a DIY Fight Stick box.  
 <br/>
 **The Code:**<br/>
-There are two versions of code: Pick your code to use
+There are three versions of code: Pick your code to use
 - Standard Mouse and Joystick buttons version  
   - Spinner_8-Button.ino
 - Special Mouse only version with & without Mouse buttons - no Joystick buttons  
   - Spinner_L-C-R-Button_Special.ino
+- Standard Mouse and Joystick buttons version with override Joystick directions (using buttons for menu)
+  - Spinner_8-Button-mod.ino
 
 **Extra expenses:**  
 Dupont connectors 2.54mm pitch JST SM kit (requires special crimper)  
