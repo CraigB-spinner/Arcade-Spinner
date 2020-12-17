@@ -55,7 +55,7 @@ There are three versions of code: Pick your code to use
   - Spinner_8-Button.ino
 - Special Mouse only version with & without Mouse buttons - no Joystick buttons  
   - Spinner_L-C-R-Button_Special.ino
-- Standard Mouse and Joystick buttons version with override Joystick directions (using buttons for menu)
+- Standard Mouse and Joystick buttons version - override Joystick directions (using buttons for menu)
   - Spinner_8-Button-mod.ino
 
 **Extra expenses:**  
