@@ -1,4 +1,4 @@
-### Arcade-Spinner
+# Arcade-Spinner
 Arcade Spinner version 2 - based off earlier 'jmtw000' version <br/><br/>
 ![Spinner](Pics/IMG_3830.jpg)  
 **Using an Arduino Pro Micro - DIY Spinner Controller, plus affordable Rotary Encoder**  
