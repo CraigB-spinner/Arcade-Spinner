@@ -84,12 +84,13 @@ volatile int xAxis = 1;
 volatile int yAxis = 0; 
 
 // Last state of 10 buttons (update array for your maxBut buttons)
-int lastButtonState[maxBut] = {1,1,1,1,1,1,0,1,1,1};
-#endif
-#ifndef axisFlip
+// Since Button Port Bits are set to 1 to activate (pull-up resistors for input), 
+// the press state is low, and not pressed is high.
+// axisFlip 6
+int lastButtonState[maxBut] = {1,1,1,1,1,1,1,0,1,1};
+#else
 int lastButtonState[maxBut] = {1,1,1,1,1,1,0,0,1,1};
 #endif
-
 
 void setup() {
   //No need to set the pin modes with DDRx = DDRx | 0b00000000 as we're using all input and that's the initial state of the pins
@@ -316,5 +317,4 @@ void loop(){
 
     ++button;
   } while (button < maxBut);
-
 }
