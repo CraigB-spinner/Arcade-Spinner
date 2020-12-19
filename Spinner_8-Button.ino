@@ -2,7 +2,7 @@
 *    Craig B  - (craigbspinner@gmail.com)
 *    Copyright 2018 Joe W (jmtw000 a/t gmail.com)
 *                   Craig B - based on Spinner code from early June 2019 
-*                   Craig B - Updated code from late June 2019, 
+*    Copyright 2019 Craig B - Updated code from late June 2019, 
 *                             Added spinner movement ACCM/DROP, 
 *                             Optimized code speed by changing if logic to case statement logic for Button validation of port bits.
 *                   Craig B - Added code for spinner movement NORM/ACCS/ACCX, RetroPi fix - July 2019         
