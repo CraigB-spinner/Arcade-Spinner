@@ -82,7 +82,6 @@ Joystick_ Joystick(JOYSTICK_DEFAULT_REPORT_ID,JOYSTICK_TYPE_GAMEPAD,
   false, false,          // No rudder or throttle
   false, false, false);  // No accelerator, brake, or steering;
 
-
 //The previous state of the AB pins
 volatile int previousReading = 0;
 
@@ -94,9 +93,17 @@ volatile int xAxis = 1;
 volatile int yAxis = 0; 
 
 // Last state of 10 buttons (update array for your maxBut buttons)
-int lastButtonState[maxBut] = {1,1,1,1,1,1,0,1,1,1};
+// Since Button Port Bits are set to 1 to activate(pull-hi input resistors), 
+// the press state is low, and not pressed is high.
+// axisFlip 6, joyStmp 7
+#ifdef joyStmp
+int lastButtonState[maxBut] = {1,1,1,1,1,1,1,1,1,1};
+#else
+int lastButtonState[maxBut] = {1,1,1,1,1,1,1,0,1,1};
 #endif
-#ifndef axisFlip
+#elif joyStmp
+int lastButtonState[maxBut] = {1,1,1,1,1,1,0,1,1,1};
+#else
 int lastButtonState[maxBut] = {1,1,1,1,1,1,0,0,1,1};
 #endif
 
