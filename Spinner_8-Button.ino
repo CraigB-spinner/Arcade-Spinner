@@ -1,4 +1,5 @@
-/*   Arcade Spinner v2.01
+/*   Arcade Spinner v2.01 
+*    Craig B  - (craigbspinner@gmail.com)
 *    Copyright 2018 Joe W (jmtw000 a/t gmail.com)
 *                   Craig B - based on Spinner code from early June 2019 
 *                   Craig B - Updated code from late June 2019, 
