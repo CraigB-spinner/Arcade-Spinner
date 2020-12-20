@@ -98,8 +98,12 @@ void setup() {
   
   //Use internal input resistors for all the pins we're using  
   PORTD = 0b10010011; //Digital pins D2(1), D3(0), D4(4), and D6(7).
-  PORTB = 0b01110111; //Digital pins D8(4), D9(5), D10(6), and D15(1). D14(3), D16(2) requires PB0 set high(master)
-  PORTC = 0b01000000; //Digital pin D5(6)
+//PORTB = 0b01110111; //Digital pins D8(4), D9(5), D10(6), and D15(1). {D16(2), D14(3)}; D16 requires PB0 set high(master) - (Button 5, 6, 9 & 10)
+#ifdef axisFlip       // D16 - PB2 & PB0 hi
+  PORTB = 0b01110111; //(Button 5, 6, 7-Axis, 9 & 10)
+#else
+  PORTB = 0b01110010; //(Button 5, 6, 9 & 10)
+#endif  PORTC = 0b01000000; //Digital pin D5(6)  PORTC = 0b01000000; //Digital pin D5(6)
   PORTE = 0b01000000; //Digital pin D7(6)
 //PORTF = 0b11000000; //Digital pin A0(7) & A1(6). A2(5), A3(4) 
 
