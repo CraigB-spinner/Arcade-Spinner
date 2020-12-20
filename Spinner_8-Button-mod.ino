@@ -115,9 +115,18 @@ void setup() {
   //Use internal input resistors for all the pins we're using - pull high resistor, when button pressed (short to ground) input on pin is pulled low.
   //Digital pin D# corresponds to silk screen on micro-controller board, (#) corresponds to port bit internal use MSD(7)-to-LSD(0) - you assign button # in code 
   PORTD = 0b10010011; //Digital pins D2(1), D3(0), D4(4), and D6(7). - Spinner x-axis only, and (Button 1 & 3)
-  PORTB = 0b01110010; //Digital pins D8(4), D9(5), D10(6), and D15(1). - (Button 5, 6, 9 & 10)
-//PORTB = 0b01110111; //Digital pins D8(4), D9(5), D10(6), D15(1) and D16(2). { D14(3) }; D16 requires PB0 set high(master) - (Button 5, 6, 9, 10 & 16)
-  PORTC = 0b01000000; //Digital pin D5(6) - (Button 2)
+//PORTB = 0b01110111; //Digital pins D8(4), D9(5), D10(6), and D15(1). {D16(2), D14(3)}; D16 requires PB0 set high(master) - (Button 5, 6, 9 & 10)
+#ifdef axisFlip       // D16 - PB2 & PB0 hi
+#ifdef joyStmp        // D14 - PB3 hi
+  PORTB = 0b01111111; //(Button 5, 6, 7-Axis, 8-Joys, 9 & 10)
+#else
+  PORTB = 0b01110111; //(Button 5, 6, 7-Axis, 9 & 10)
+#endif
+#elif joyStmp
+  PORTB = 0b01111010; //(Button 5, 6, 8-Joys, 9 & 10)
+#else
+  PORTB = 0b01110010; //(Button 5, 6, 9 & 10)
+#endif  PORTC = 0b01000000; //Digital pin D5(6) - (Button 2)
   PORTE = 0b01000000; //Digital pin D7(6) - (Button 4)
 //PORTF = 0b11000000; //Digital pin A0(7) & A1(6). A2(5), A3(4) 
 
