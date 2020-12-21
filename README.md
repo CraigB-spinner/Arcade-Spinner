@@ -20,7 +20,7 @@ This project uses an Arduino Pro Micro clone, arcade spinner, with 8 buttons (up
 To construct this, you will need a 2-phase rotary encoder which can operate at 5v and some momentary switch buttons plus Arduino micro-controller or Sparkfun Pro Micro - 5V version or similar clone.<br/> 
 [**Rotary encoder** used](https://www.amazon.ca/gp/product/B00IJ788AA/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1) (600 pulses/rev quadrature optical encoder = 2400 pulse spinner)<br/>
 [**Wheel** used](https://www.amazon.ca/gp/product/B07DPDJHR6/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1) (Generous 2.5" dia. aluminum/rubber weighted spinner, better than 1" guitar knobs)<br/>
-[**ATmega32U4** used] (clone of SparkFun Pro Micro)(https://www.amazon.ca/gp/product/B01N4TVIQX/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)<br/> 
+[**ATmega32U4** used](https://www.amazon.ca/gp/product/B01N4TVIQX/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1) (clone of SparkFun Pro Micro)<br/> 
 [**Arcade Box** used](https://www.amazon.ca/gp/product/B07HRS9BFK/ref=ppx_yo_dt_b_asin_image_o01_s00?ie=UTF8&psc=1) (convenient plastic fightstick box)<br/><br/>
 
 You will also need the Arduino joystick library available at: https://github.com/MHeironimus/ArduinoJoystickLibrary<br/><br/>
