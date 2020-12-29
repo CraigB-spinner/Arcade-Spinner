@@ -24,16 +24,14 @@ To construct this, you will need a 2-phase rotary encoder which can operate at 5
 [**Arcade Box** used](https://www.amazon.ca/gp/product/B07HRS9BFK/ref=ppx_yo_dt_b_asin_image_o01_s00?ie=UTF8&psc=1) (convenient plastic fightstick box)<br/><br/>
 
 You will also need the Arduino joystick library available at: https://github.com/MHeironimus/ArduinoJoystickLibrary  
-Matthew Heironimus joystick code: [Joystick.cpp](https://github.com/MHeironimus/ArduinoJoystickLibrary/blob/master/src/Joystick.cpp) & [Joystick.h](https://github.com/MHeironimus/ArduinoJoystickLibrary/blob/master/src/Joystick.h)  
-Download [master.zip](https://github.com/MHeironimus/ArduinoJoystickLibrary/archive/master.zip)  
-In the Arduino IDE, 
+Matthew Heironimus joystick code: [Joystick.cpp](https://github.com/MHeironimus/ArduinoJoystickLibrary/blob/master/src/Joystick.cpp) & [Joystick.h](https://github.com/MHeironimus/ArduinoJoystickLibrary/blob/master/src/Joystick.h) or Download [master.zip](https://github.com/MHeironimus/ArduinoJoystickLibrary/archive/master.zip)  
+In the Arduino IDE: 
 * Select Sketch 
 * Include Library 
 * Add .ZIP Library... 
 * Browse to downloaded ZIP file 
-* Click Open  
+* Click Open <br/><br/>
 The Joystick library's examples will now appear under File > Examples > Joystick.  
-<br/><br/>
 
 This device will be detected as both a mouse and a joystick/gamepad. The joystick only has X and Y axes which we don't use. At least one axis is needed by the library to declare the joystick and it was found that 2 were required for the controller to be detected on some systems (RetroPie). We just center the X and Y axes in setup() and forget about them. The spinner controls the mouse X axis which is by default mapped to the analog dial in MAME (don't forget to enable the mouse in MAME under advanced options!). The buttons will work as regular gamepad/joystick buttons. The 2400 different positions (transitions) that can be detected on the 600ppr(pulse per revolution) encoder I'm using are way too many for our purposes so they are halved in the code to 1200. The code uses the Atmega32u4 ports directly because that's faster than using digitalRead/Write. I'm not doing any debouncing of the buttons or encoder as it seems to work great for me as is, but you might want to add debouncing depending on your hardware.<br/><br/>
 
