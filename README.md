@@ -57,11 +57,11 @@ My [Finished Spinner](Pics/CraigB's%20Spinner.jpg) assembled within a DIY Fight 
 **The Code:**<br/>
 There are three versions of code: Pick your code to use
 - Standard Mouse and Joystick buttons version  
-  - Spinner_8-Button.ino
+  - [Spinner_8-Button.ino](Spinner_8-Button.ino)
 - Special Mouse only version with & without Mouse buttons - no Joystick buttons  
-  - Spinner_L-C-R-Button_Special.ino
+  - [Spinner_L-C-R-Button_Special.ino](Spinner_L-C-R-Button_Special.ino)
 - Standard Mouse and Joystick buttons version - mod Joystick directions (use buttons for menu)
-  - Spinner_8-Button-mod.ino
+  - [Spinner_8-Button-mod.ino](Spinner_8-Button-mod.ino)
 
 **Extra expenses:**  
 Dupont connectors 2.54mm pitch JST SM kit (requires special crimper)  
