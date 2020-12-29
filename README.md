@@ -27,7 +27,7 @@ You will need Arduino joystick library at: [https://github.com/MHeironimus/Ardui
 Matthew Heironimus joystick code: [Joystick.cpp](https://github.com/MHeironimus/ArduinoJoystickLibrary/blob/master/src/Joystick.cpp) & 
 [Joystick.h](https://github.com/MHeironimus/ArduinoJoystickLibrary/blob/master/src/Joystick.h) or 
 Download: [master.zip](https://github.com/MHeironimus/ArduinoJoystickLibrary/archive/master.zip)  
-In the Arduino IDE:
+In Arduino IDE:
 - Select Sketch 
 - Include Library 
 - Add .ZIP Library... 
