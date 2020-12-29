@@ -25,8 +25,8 @@ To construct this, you will need a 2-phase rotary encoder which can operate at 5
 
 You will also need the Arduino joystick library available at: https://github.com/MHeironimus/ArduinoJoystickLibrary  
 Matthew Heironimus joystick code: [Joystick.cpp](https://github.com/MHeironimus/ArduinoJoystickLibrary/blob/master/src/Joystick.cpp) & [Joystick.h](https://github.com/MHeironimus/ArduinoJoystickLibrary/blob/master/src/Joystick.h) or Download [master.zip](https://github.com/MHeironimus/ArduinoJoystickLibrary/archive/master.zip)  
-In the Arduino IDE: 
-- Select Sketch 
+In the Arduino IDE:
+- &#x2408;Select Sketch 
 - Include Library 
 - Add .ZIP Library... 
 - Browse to downloaded ZIP file 
