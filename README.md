@@ -89,7 +89,7 @@ See the Trackball project [here](https://craigb-spinner.github.io/Arcade-Trackba
 ![RetroPie Logo](Pics/RetroPie%20Logo.png) RetroPie [laggy spinner/trackball](laggy_mouse.md) issues
 
 **More pictures:**  
-My Arcade Spinner assembled within a DIY Fight Stick box - 
+My Arcade Spinner assembled within a DIY Fight Stick box -  
 "[Spin Shadow](Pics/Spin%20Shadow.jpg)", 
 "[Spin HiLite](Pics/Spin%20HiLite.jpg)", 
 "[Spin](Pics/Spin%20Full.jpg)", 
