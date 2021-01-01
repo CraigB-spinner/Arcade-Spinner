@@ -62,7 +62,8 @@
 
 #define pinA 2    //The pins that the rotary encoder's A and B terminals are connected to.
 #define pinB 3
-#define maxBut 10
+
+#define maxBut 10   //Update lastButtonState array below when changing number of elements.
 #define axisFlip 6  //Special flip button (button offset: 0 thru 9) - comment out if 'x/y-axis' feature not required by you.
 
 //Create a Joystick object.
@@ -87,7 +88,7 @@ volatile int yAxis = 0;
 // Last state of 10 buttons (update array for your maxBut buttons)
 // Since Button Port Bits are set to 1 to activate (pull-up resistors for input), 
 // the press state is low, and not pressed is high.
-// axisFlip 6
+// axisFlip 6 (button offset: 0 thru 9)
 int lastButtonState[maxBut] = {1,1,1,1,1,1,1,0,1,1};
 #else
 int lastButtonState[maxBut] = {1,1,1,1,1,1,0,0,1,1};
