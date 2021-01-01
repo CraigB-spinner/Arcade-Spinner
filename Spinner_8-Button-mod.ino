@@ -63,17 +63,18 @@
 
 #define pinA 2    //The pins that the rotary encoder's A and B terminals are connected to.
 #define pinB 3
-#define maxBut 10
 
-//#define TEST        //Display info on Serial Monitor
-//#define axisFlip 6  //Special flip button (button offset: 0 thru 9) - comment out if 'x/y-axis' feature not required by you.
-//#define joyStmp  7  //Special temp JoyStick override button (button offset: 0 thru 9) - comment out if feature not required by you.
-#define butPrs 0      //Button pulled low when pressed
-#define butOff 1      //Button pullup high when not pressed
+#define maxBut 10     //Update lastButtonState array below when changing number of elements.
+//#define axisFlip 6  //Special flip button (button offset: 0 thru 9) - comment out if 'x-axis disable' feature not required by you.
+//#define joyStmp  7  //Special temp JoyStick override button (button offset: 0 thru 9) - comment out if 'JoyStick override' feature not required by you.
 
 #ifdef joyStmp
 int joyStOn = 1;      //Joystick override status of button - off
 #endif
+#define butPrs 0      //Button pulled low when pressed
+#define butOff 1      //Button pullup high when not pressed
+
+//#define TEST        //Display info on Serial Monitor
  
 //Create a Joystick object.
 Joystick_ Joystick(JOYSTICK_DEFAULT_REPORT_ID,JOYSTICK_TYPE_GAMEPAD,
@@ -96,7 +97,7 @@ volatile int yAxis = 0;
 // Last state of 10 buttons (update array for your maxBut buttons)
 // Since Button Port Bits are set to 1 to activate(pull-hi input resistors), 
 // the press state is low, and not pressed is high.
-// axisFlip 6, joyStmp 7
+// axisFlip 6, joyStmp 7 (button offset: 0 thru 9)
 #ifdef joyStmp
 int lastButtonState[maxBut] = {1,1,1,1,1,1,1,1,1,1};
 #else
@@ -296,7 +297,7 @@ void loop(){
   //Note: Pro Micro boards use various ports to access different digital pins. 
   //Buttons 1-6, plus 9-select(coin), and 10-start(player) used; buttons 7 & 8 unused
   //Using digital pins 4, 5, 6, 7, 8, 9, 10, and 15 on Pro Micro board. See silk screening.
-  //Pins 16 and 14 are free to use.
+  //Pins 16 and 14 are free to use. (assigned to special features)
   //Pins 2 and 3 are used for spinner rotary output as they are interrupt driven.
   int button = 0;
   do {
@@ -369,28 +370,28 @@ void loop(){
         if (currentButtonState != lastButtonState[button]) {
           switch ( button ) {
             case 2: // LEFT
-              if (currentButtonState == 1) {
+              if (currentButtonState == butOff) {
                 Joystick.setXAxis(511);
               } else {
                 Joystick.setXAxis(0);
               }
               break;
             case 3: // UP
-              if (currentButtonState == 1) {
+              if (currentButtonState == butOff) {
                 Joystick.setYAxis(511);
               } else {
                 Joystick.setYAxis(0);
               }
               break;
             case 4: // RIGHT
-              if (currentButtonState == 1) {
+              if (currentButtonState == butOff) {
                 Joystick.setXAxis(511);
               } else {
                 Joystick.setXAxis(1023);
               }
               break;
             case 5: // DOWN
-              if (currentButtonState == 1) {
+              if (currentButtonState == butOff) {
                 Joystick.setYAxis(511);
               } else {
                 Joystick.setYAxis(1023);
