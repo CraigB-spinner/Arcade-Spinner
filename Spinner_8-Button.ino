@@ -104,7 +104,8 @@ void setup() {
   PORTB = 0b01110111; //(Button 5, 6, 7-Axis, 9 & 10)
 #else
   PORTB = 0b01110010; //(Button 5, 6, 9 & 10)
-#endif  PORTC = 0b01000000; //Digital pin D5(6)  PORTC = 0b01000000; //Digital pin D5(6)
+#endif  
+  PORTC = 0b01000000; //Digital pin D5(6)  
   PORTE = 0b01000000; //Digital pin D7(6)
 //PORTF = 0b11000000; //Digital pin A0(7) & A1(6). A2(5), A3(4) 
 
