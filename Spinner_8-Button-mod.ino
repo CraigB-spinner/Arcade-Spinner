@@ -35,7 +35,7 @@
 */
 
 // Port Bit/Pin layout   
-//      Bit - 76543210 - Silk screen ## - Micro-Controller
+//      Bit -  76543210 - Silk screen ## - Micro-Controller
 #define xPB3 0b00001000 //Digital Pin 0  - Micro/PRO Micro - RX,  INT2
 #define xPB2 0b00000100 //Digital Pin 1  - Micro/PRO Micro - TX,  INT3
 #define xPB1 0b00000010 //Digital Pin 2  - Micro/PRO Micro - SDA, INT0
@@ -85,11 +85,11 @@ Joystick_ Joystick(JOYSTICK_DEFAULT_REPORT_ID,JOYSTICK_TYPE_GAMEPAD,
   false, false, false);  // No accelerator, brake, or steering;
 
 //The previous state of the AB pins
-volatile int previousReading = 0;
+volatile int prevQuadratureX = 0;
 
 //Keeps track of how much the encoder has been moved
-volatile int rotPosition = 0;
-volatile int rotMulti = 0;
+volatile int rotPositionX = 0;
+volatile int rotMultiX = 0;
 #ifdef axisFlip
 volatile int xAxis = 1; 
 volatile int yAxis = 0; 
@@ -144,150 +144,146 @@ void setup() {
 #endif
 
   //Set up the interrupt handler for the encoder's A and B terminals on digital pins 2 and 3 respectively. Both interrupts use the same handler.
-  attachInterrupt(digitalPinToInterrupt(pinA), pinChange, CHANGE); 
-  attachInterrupt(digitalPinToInterrupt(pinB), pinChange, CHANGE);
+  attachInterrupt(digitalPinToInterrupt(pinA), pinChangeX, CHANGE); 
+  attachInterrupt(digitalPinToInterrupt(pinB), pinChangeX, CHANGE);
 
   //Start the mouse
   Mouse.begin();
   }
 
-//Interrupt handler
-//Digital pins 2 and 3 are used for spinner rotary output as they are interrupt driven.
-void pinChange() {
+//---------------------------------------------------------------------
+//Interrupt handler x-axis
+void pinChangeX() {
 
-  //Set the currentReading variable to the current state of encoder terminals A and B which are conveniently 
-  //located in bits 0 and 1 (digital pins 2 and 3) of PortB
-  //This will give us a nice binary number, eg. 0b00000011, representing the current state of the two terminals.
-  //You could do int currentReading = (digitalRead(pinA) << 1) | digitalRead(pinB); to get the same thing, but it would be much slower.
-  
+  //Set currQuadratureX to state of rotary encoder terminals A & B from input of PORTD bits 0 & 1 (digital pins 2 and 3)
+  //You could do int currQuadratureX = (digitalRead(pinA) << 1) | digitalRead(pinB); to get the same thing, but it would be much slower.
   //Read current state 00AB.
-  int currentReading = PIND & 0b00000011;
+  int currQuadratureX = PIND & 0b00000011;
 
-  //Take the nice binary number we got last time there was an interrupt and shift it to the left by 2 then OR it with the current reading.
-  //This will give us a nice binary number, eg. 0b00001100, representing the former and current state of the two encoder terminals.
-  //Shift left 2 bits: 00AB -> AB00 to hold last current state as prior state.
-  int combinedReading  = (previousReading << 2) | currentReading; 
-
-  //Now that we know the previous and current state of the two terminals we can determine which direction the rotary encoder is turning.
+  //Store comboQuadratureX with previous and current quadrature rotary encoder states together. 
+  //Combined previous/current states form two groups of four unique bit patterns indicating direction of movement.
+  //Shift left 2 bits: 00AB <- AB00 to store current state as previous state.
+  int comboQuadratureX  = (prevQuadratureX << 2) | currQuadratureX; 
 
   //Rotate to the right, Clockwise
-  //State 00AB, A leads B. A0 -> AB -> 0B -> 00 
-  if(combinedReading == 0b0010 || 
-     combinedReading == 0b1011 ||
-     combinedReading == 0b1101 || 
-     combinedReading == 0b0100) {
-     rotPosition++;                   //update the position of the encoder
-  }
+  //State 00AB, A leads B. A0 -> AB -> 0B -> 00 0b0010 0b1011 0b1101 0b0100
+  if(comboQuadratureX == 0b0010 || comboQuadratureX == 0b1011 ||
+     comboQuadratureX == 0b1101 || comboQuadratureX == 0b0100) 
+    rotPositionX++;                   //update the position of the encoder
 
   //Rotate to the left, Counter Clockwise
-  //State 00AB, B leads A. 0B -> AB -> A0 -> 00
-  if(combinedReading == 0b0001 ||
-     combinedReading == 0b0111 ||
-     combinedReading == 0b1110 ||
-     combinedReading == 0b1000) {
-     rotPosition--;                   //update the position of the encoder
-  }
-
+  //State 00AB, B leads A. 0B -> AB -> A0 -> 00 0b0001 0b0111 0b1110 0b1000
+  if(comboQuadratureX == 0b0001 || comboQuadratureX == 0b0111 ||
+     comboQuadratureX == 0b1110 || comboQuadratureX == 0b1000) 
+    rotPositionX--;                   //update the position of the encoder
+ 
   //Save the previous state of the A and B terminals for next time
-  previousReading = currentReading;
+  prevQuadratureX = currQuadratureX;
 }
 
+
+//---------------------------------------------------------------------
+//Process the x/y axis mouse movement using one criteria (NORM, DROP, ACCS, ACCM, ACCX)
+//most criteria process two edge transistions before moving the mouse/spinner pointer.
+//Then cycle thru eight button states 1, 2, 3, 4, 5, 6, Coin(9), Start(10), to trigger button press/release on joystick
 void loop(){ 
   int currentButtonState;
 
+// *** Spinner movement logic ***
 #ifdef NORM
   //If the encoder has moved 2 or more transitions move the mouse in the appropriate direction 
   //and update the position variable to reflect that we moved the mouse. Smooth movement but lags.
-  if(rotPosition >= 2) {
-#ifdef axisFlip
+  if(rotPositionX >= 2) {
+  #ifdef axisFlip
     Mouse.move(xAxis,yAxis,0);
-#endif 
-#ifndef axisFlip
+  #endif 
+  #ifndef axisFlip
     Mouse.move(1,0,0);
-#endif 
-    rotPosition -= 2;
-  } else if(rotPosition <= -2) {
-#ifdef axisFlip
+  #endif 
+    rotPositionX -= 2;
+  } else if(rotPositionX <= -2) {
+  #ifdef axisFlip
     Mouse.move(-xAxis,-yAxis,0);
-#endif 
-#ifndef axisFlip
+  #endif 
+  #ifndef axisFlip
     Mouse.move(-1,0,0);
-#endif 
-    rotPosition += 2;
+  #endif 
+    rotPositionX += 2;
   } 
 #endif 
 
 #ifdef DROP
   //If the encoder has moved 2 or more transitions move the mouse in the appropriate direction 
   //and update the position variable to reflect that we moved the mouse. Smooth drop extra moves.
-  if(rotPosition >= 2) {
-#ifdef axisFlip
+  if(rotPositionX >= 2) {
+  #ifdef axisFlip
     Mouse.move(xAxis,yAxis,0);
-#endif 
-#ifndef axisFlip
+  #endif 
+  #ifndef axisFlip
     Mouse.move(1,0,0);
-#endif 
-    rotPosition = 0;
-  } else if(rotPosition <= -2) {
-#ifdef axisFlip
+  #endif 
+    rotPositionX = 0;
+  } else if(rotPositionX <= -2) {
+  #ifdef axisFlip
     Mouse.move(-xAxis,-yAxis,0);
-#endif 
-#ifndef axisFlip
+  #endif 
+  #ifndef axisFlip
     Mouse.move(-1,0,0);
-#endif 
-    rotPosition = 0;
+  #endif 
+    rotPositionX = 0;
   } 
 #endif 
 
 #ifdef ACCS
   //If the encoder has moved 1 or more transitions move the mouse in the appropriate direction 
   //and update the position variable to reflect that we moved the mouse. Accelerated move.
-  if(rotPosition != 0) {
-#ifdef axisFlip
-    int x = (xAxis) ? rotPosition : 0;
-    int y = (yAxis) ? rotPosition : 0;
+  if(rotPositionX  != 0) {
+  #ifdef axisFlip
+    int x = (xAxis) ? rotPositionX : 0;
+    int y = (yAxis) ? rotPositionX : 0;
     Mouse.move(x,y,0);
-#endif 
-#ifndef axisFlip
-    Mouse.move(rotPosition,0,0);
-#endif 
-    rotPosition = 0;
+  #endif 
+  #ifndef axisFlip
+    Mouse.move(rotPositionX ,0,0);
+  #endif 
+    rotPositionX  = 0;
   }
 #endif 
 
 #ifdef ACCM
   //If the encoder has moved 2 or more transitions move the mouse in the appropriate direction 
   //and update the position variable to reflect that we moved the mouse. Accelerated move.
-  if(rotPosition >= 2 || rotPosition <= -2) {
-    rotMulti = rotPosition >> 1;
-#ifdef axisFlip
-    int x = (xAxis) ? rotMulti : 0;
-    int y = (yAxis) ? rotMulti : 0;
+  if(rotPositionX >= 2 || rotPositionX <= -2) {
+    rotMultiX = rotPositionX >> 1;
+  #ifdef axisFlip
+    int x = (xAxis) ? rotMultiX : 0;
+    int y = (yAxis) ? rotMultiX : 0;
     Mouse.move(x,y,0);
-#endif 
-#ifndef axisFlip  
-    Mouse.move(rotMulti,0,0);
-#endif 
-    rotPosition -= (rotMulti << 1);
+  #endif 
+  #ifndef axisFlip  
+    Mouse.move(rotMultiX,0,0);
+  #endif 
+    rotPositionX -= (rotMultiX << 1);
   }
 #endif 
 
 #ifdef ACCX
   //If the encoder has moved 4 or more transitions move the mouse in the appropriate direction 
   //and update the position variable to reflect that we moved the mouse. Accelerated move.
-  if(rotPosition >= 4 || rotPosition <= -4) {
-    rotMulti = rotPosition >> 2;
-#ifdef axisFlip
-    int x = (xAxis) ? rotMulti : 0;
-    int y = (yAxis) ? rotMulti : 0;
+  if(rotPositionX >= 4 || rotPositionX <= -4) {
+    rotMultiX = rotPositionX >> 2;
+  #ifdef axisFlip
+    int x = (xAxis) ? rotMultiX : 0;
+    int y = (yAxis) ? rotMultiX : 0;
     Mouse.move(x,y,0);
-#endif 
-#ifndef axisFlip
-    Mouse.move(rotMulti,0,0);
-#endif 
-    rotPosition -= (rotMulti << 2);
+  #endif 
+  #ifndef axisFlip
+    Mouse.move(rotMultiX,0,0);
+  #endif 
+    rotPositionX -= (rotMultiX << 2);
   }
 #endif 
+// *** Spinner movement logic ***
 
 
 //---------------------------------------------------------------------------------------------------
@@ -321,16 +317,16 @@ void loop(){
       case 5:  //on digital pin 9, PB5 - Arcade Button 6
         currentButtonState = (PINB & xPB5) >> 5;
         break;
-#ifdef axisFlip
+    #ifdef axisFlip
       case 6:  //on digital pin 16, PB2 - Special Axis Button (internal function) - requires PB0 set to master or high
         currentButtonState = (PINB & xPB2) >> 2;
         break; 
-#endif
-#ifdef joyStmp
+    #endif
+    #ifdef joyStmp
       case 7:  //on digital pin 14, PB3 - 2nd Special Button 
         currentButtonState = (PINB & xPB3) >> 3;
         break; 
-#endif
+    #endif
       case 8:  //on digital pin 10, PB6 - COIN/Select Button 9
         currentButtonState = (PINB & xPB6) >> 6;
         break;
@@ -352,15 +348,15 @@ void loop(){
    
 //If the current state of the pin for each button is different than last time, update the joystick button state
     if(currentButtonState != lastButtonState[button]) { //change in button
-#ifdef axisFlip
+  #ifdef axisFlip
       if (button == axisFlip ) { //change x/y axis
         xAxis = !xAxis;
         yAxis = !yAxis;
       } else
-#endif
+  #endif
 
-// *** tmp joystick logic ***
-#ifdef joyStmp
+// *** Temporary joystick logic ***
+  #ifdef joyStmp
       if (button == joyStmp ) { //change buttons to tmp joystick
         joyStOn = !joyStOn;
       }
@@ -405,8 +401,8 @@ void loop(){
       }
 
       if ( joyStOn == butOff ) 
-#endif
-// *** tmp joystick ***
+  #endif
+// *** Temporary joystick logic ***
         Joystick.setButton(button, !currentButtonState);
     }
     
