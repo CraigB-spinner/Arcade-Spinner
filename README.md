@@ -77,7 +77,7 @@ There are three versions of code: Pick your code to use
 
 <sub>1. Used two TTP223 Capacitive Touch switches to control special functions: the 
 "[Touch Switches](Pics/Double%20Touch.jpg)"   
-Note: Invert the Touch I/O state by shorting contact A to Vcc, and/or contact B to activate on/off toggle mode.</sub>  
+Note: Invert the Touch I/O state by shorting [contact A to Vcc](Pics/TTP223B_chip_side.jpg), and/or contact B to activate on/off toggle mode.</sub>  
 
 **Extra expenses:**  
 Dupont connectors 2.54mm pitch JST SM kit (requires special crimper)  
