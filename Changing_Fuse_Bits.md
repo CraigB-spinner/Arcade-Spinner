@@ -3,7 +3,7 @@ I used a [USBtinyISP Programmer](Pics/USBtinyISP%20Programmer.jpg) with a custom
 Harness is a single 3x2 Female JST connector  
 wired into a dual 4x1 Female JST connector, or  
 ICSP 6-Pin Cable coverting to Arduino Pro Micro headers.
-[See here](Pics/USBtinyISP-Programmer+DIY-Harness.jpg)
+[See here](Pics/USBtinyISP-Programmer+DIY-Harness.jpg)  
 
 32u4<br/>Pin |Data |wire   |USBtiny<br/>Row/Col
 --- |---- |------ |--------
