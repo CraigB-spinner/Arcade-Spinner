@@ -75,7 +75,7 @@ There are three versions of code: Pick your code to use
 - Standard Mouse and Joystick buttons version - mod Joystick directions (use buttons for menu)
   - [Spinner_8-Button-mod.ino](Spinner_8-Button-mod.ino)<sub> 1.</sub><br/>
 
-<sub>1. Use TTP223 Capacitive Touch switches to control special functions: the 
+<sub>1. Use of TTP223 Capacitive Touch switches to control special functions: the 
 "[Touch Switches](Pics/Double%20Touch.jpg)"   
 Note: Invert the Touch I/O state by shorting [contact A to Vcc](Pics/TTP223B_chip_side.jpg), and/or contact B to activate on/off toggle mode.</sub>  
 
