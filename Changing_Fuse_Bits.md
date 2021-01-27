@@ -31,3 +31,10 @@ on the same line separated from other stuff by spaces
 This parameter enforces a mouse polling rate of 62.5Hz and reduces any quick movement lag.  
 
 `sudo reboot`
+Inside the Atmel manual for ATMega32U4 micro-controller, pages: 346 - 348  
+[High & Low bits](Pics/ATMega32U4%20-%20Fuse%20bits%20-%20High%20&%20Low.jpg), 
+[Extended bits](Pics/ATMega32U4 - Fuse bits - Extended.jpg), 
+[Lock bits](Pics/ATMega32U4 - Lock bits.jpg)  
+
+
+
