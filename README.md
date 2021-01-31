@@ -91,7 +91,7 @@ Clear Lexan makes visibility easier for fabrication.<br/>
 See the Trackball project [here](https://craigb-spinner.github.io/Arcade-Trackball/)  
 
 **Video:**  
-[**Spinner in Action**](https://www.youtube.com/watch?v=HmqkHAPZHQA) playing **Tempest**<br/>
+![**Spinner in Action**](https://www.youtube.com/watch?v=HmqkHAPZHQA) playing **Tempest**<br/>
 
 ![RetroPie Logo](Pics/RetroPie%20Logo.png) RetroPie [laggy spinner/trackball](laggy_mouse.md) issues
 
