@@ -9,10 +9,10 @@ Here are some brandname Arduino boards:
 * Arduino [Micro](Pics/Adafruit%20ItsyBitsy%20-%20Arduino%20Micro.jpg), Adafruit ItsyBitsy  
 * Arduino [Pro Micro](Pics/Arduino%20Pro%20Micro%20(SparkFun).jpg) by SparkFun
 
-**Sept. 5/20**  Uploaded my version of code from 2019; sourced June 27/19 and modified/optimized/bug fixed during summer 2019.<br/>
-**Sept. 11/20** Uploaded revised code to allow switching of Spinner's X & Y axis - mod axisFlip directive to setup special button of choice. <br/>
-**Dec. 11/20**  Uploaded new code for Mouse only Spinner operation. Note: all buttons can be inactivated for Spinner-Only operation.  
-**Dec. 16/20**  Uploaded new code for override Joystick directions mod (using buttons for menu)<br/><br/>
+**Sept. 5/20:**  Uploaded my version of code from 2019; sourced June 27/19 and modified/optimized/bug fixed during summer 2019.<br/>
+**Sept. 11/20:** Uploaded revised code to allow switching of Spinner's X & Y axis - mod axisFlip directive to setup special button of choice. <br/>
+**Dec. 11/20:**  Uploaded new code for Mouse only Spinner operation. Note: all buttons can be inactivated for Spinner-Only operation.  
+**Dec. 16/20:**  Uploaded new code for override Joystick directions mod (using buttons for menu)<br/><br/>
 Updated readme from 'jmtw000' version with different component list...
 
 This project uses an Arduino Pro Micro clone, arcade spinner, with 8 buttons (up to 10). It maybe used with MAME or any other emulator which can use the X axis of the mouse as a paddle/spinner controller. The code should work on any board which uses the ATmega32U4 as long as the port pins are mapped to the same "digital pins". The spinner was created because it was a cheaper alternative to commercially available ones. I find it works well for ball and paddle games, like Tempest, and also makes a decent controller for driving games.
