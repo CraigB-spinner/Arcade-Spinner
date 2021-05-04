@@ -65,7 +65,9 @@ Vcc |     |+5v - Red/White
 
 I am using Xbox A/B, X/Y configuration, Nintendo protocol is B/A, Y/X reversed controls. (Japanese cultural differences) 
 You can assign buttons to any assignment in RetroArch but it is best to pick a consistent pattern across all controllers to avoid confusion.  
-<br/>
+
+To test your new controller within windows: Start, Control panel, in Search Type: joy, Under Devices and Printers: Click on Set up USB game controllers then Properties  
+n<br/>
 My [Finished Spinner](Pics/CraigB's%20Spinner.jpg) assembled within a DIY Fight Stick box.  
 <br/>
 **The Code:**<br/>
