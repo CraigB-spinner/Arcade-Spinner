@@ -11,7 +11,11 @@ Configure any software Option by right-click and select Comment/Uncomment *#defi
 If upload is sucessful, you can now test your new controller.  
 You may want to upload the blink Sketch to confirm communications is working between your computer and Arduino.
 
-To test your new controller within windows: Start, Control panel, in Search Type: joy, Under Devices and Printers: Click on Set up USB game controllers then Properties  
+To test your new controller within windows:  
+`Start`,  
+`Control panel`,  
+in `Search Type:` *joy*,  
+Under `Devices and Printers:` Click on *Set up USB game controllers* then Properties  
 
 
 
