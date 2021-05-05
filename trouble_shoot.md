@@ -14,8 +14,9 @@ You may want to upload the blink Sketch to confirm communications is working bet
 To test your new controller within windows:  
 `Start`,  
 `Control panel`,  
-in `Search Type:` *joy*,  
-Under `Devices and Printers:` Click on *Set up USB game controllers* then Properties  
+in `Search` Type *joy*,  
+under `Devices and Printers` Click *Set up USB game controllers*,  
+Click `Properties`  
 
 
 
