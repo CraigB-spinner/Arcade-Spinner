@@ -18,6 +18,6 @@ in `Search` Type *joy*,
 under `Devices and Printers` Click '*Set up USB game controllers*',  
 Click `Properties`  
 
-A button press will indicate activity of a button. If no button response, confirm wiring to button, and port. Remember in the code, button activity is active low due to hardware pull-up resistor used in Arduino MCU chip. Low is *On*, High is *Off*.  
+A button press will indicate activity of a button. If no button response, confirm wiring to button, and port. Remember in the code, button activity is active low due to hardware pull-up resistor used in Arduino MCU chip. Low is *On*, High is *Off*. When changing assigned button Port/Digital bit, corresponding pull-up resistor state must be correctly set. If pull-up resistor is set Port/Digital bit will configure for button Input.
 Mouse pointer movement will confirm Spinner/Trackball activity; if there's no movement, validate +ve/-ve power connections along with both A/B connections. Quadrature line output require working A/B signal pulses to convey direction and movement (each axis has a pair of signals assigned to either X or Y axes).  
 To change movement feel, select a different *#define* compiler directive within the code.
