@@ -2,6 +2,8 @@
 Start **ARDUINO-Genuino IDE**  
 Install the joystick library by Matthew Heironimus, and  
 SparkFun's Pro Micro, ATmega32U4, micro-controller Arduino driver.  
+A) GitHub [SparkFun Arduino boards](https://github.com/sparkfun/Arduino_Boards) source, 
+B) [SparkFun Pro Micro](https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide?_ga=2.142577458.1245326673.1620345098-474804601.1620345098#installing-windows) page  
 Load one of the software Sketches downloaded from my page.  
 Under **Tools**: setup `Board`, `Processor`, and `Port`.  
 Configure any software Option by right-click and select '*Comment/Uncomment*' *#define* compiler directive.  
@@ -9,7 +11,9 @@ Configure any software Option by right-click and select '*Comment/Uncomment*' *#
 `Upload` when compile is clean  
 
 If upload is sucessful, you can now test your new controller.  
-<sup>You may want to upload blink Sketch to confirm communications is working between your computer and Arduino.</sup>
+<sup>You may want to upload 
+[blink Sketch](https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide?_ga=2.142577458.1245326673.1620345098-474804601.1620345098#example-1-blinkies) 
+to confirm communications is working between your computer and Arduino.</sup>
 
 To test your new controller within windows:  
 `Start`,  
