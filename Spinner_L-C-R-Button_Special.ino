@@ -38,6 +38,28 @@
 *    The first two numbers are the vendor ID 16c0 and product ID 05e1.
 */
 
+// Port Bit/Pin layout   
+//      Bit -  76543210 - Silk screen ## - Micro-Controller
+#define xPD3 0b00001000 //Digital Pin 0  - Micro/PRO Micro - RX,  INT2
+#define xPD2 0b00000100 //Digital Pin 1  - Micro/PRO Micro - TX,  INT3
+#define xPD1 0b00000010 //Digital Pin 2  - Micro/PRO Micro - SDA, INT0
+#define xPD0 0b00000001 //Digital Pin 3  - Micro/PRO Micro - SCL, INT1
+#define xPD_10 (xPD1 | xPD0)
+#define xPD_32 (xPD3 | xPD2)
+#define xPD4 0b00010000 //Digital Pin 4  - Micro/PRO Micro
+#define xPC6 0b01000000 //Digital Pin 5  - Micro/PRO Micro
+#define xPD7 0b10000000 //Digital Pin 6  - Micro/PRO Micro
+#define xPE6 0b01000000 //Digital Pin 7  - Micro/PRO Micro
+#define xPB4 0b00010000 //Digital Pin 8  - Micro/PRO Micro
+#define xPB5 0b00100000 //Digital Pin 9  - Micro/PRO Micro
+#define xPB6 0b01000000 //Digital Pin 10 - Micro/PRO Micro
+#define xPB7 0b10000000 //Digital Pin 11 - Micro
+#define xPD6 0b01000000 //Digital Pin 12 - Micro
+#define xPC7 0b10000000 //Digital Pin 13 - Micro
+#define xPB3 0b00001000 //Digital Pin 14 - PRO Micro
+#define xPB1 0b00000010 //Digital Pin 15 - PRO Micro
+#define xPB2 0b00000100 //Digital Pin 16 - PRO Micro
+    
 //Mouse movement - pick one to compile specific code inside loop()
 //#define NORM   //Mouse movement Normal; every interrupt processed; maybe lag in fast movement, 2 pulse = 2 move
 //#define DROP   //Mouse movement Drop; drop extra interrupts processed; smooth movement, no lag, 2 - 2n+1 pulse = 1 move
@@ -106,7 +128,7 @@ void pinChangeX() {
   //Set currQuadratureX to state of rotary encoder terminals A & B from input of PORTD bits 0 & 1 (digital pins 2 and 3)
   //You could do int currQuadratureX = (digitalRead(pinA) << 1) | digitalRead(pinB); to get the same thing, but it would be much slower.
   //Read current state 00AB.
-  int currQuadratureX = PIND & 0b00000011;
+  int currQuadratureX = PIND & xPD_10;
 
   //Store comboQuadratureX with previous and current quadrature rotary encoder states together. 
   //Combined previous/current states form two groups of four unique bit patterns indicating direction of movement.
@@ -233,36 +255,36 @@ int currentButtonState;
   do {
     switch ( button ) {
       case 0:  //on digital pin 4, PD4 - Mouse Button 1
-        currentButtonState = (PIND & 0b00010000) >> 4;
+        currentButtonState = (PIND & xPD4) >> 4;
         break;
       case 1:  //on digital pin 5, PC6 - Mouse Button 2
-        currentButtonState = (PINC & 0b01000000) >> 6;
+        currentButtonState = (PINC & xPC6) >> 6;
         break;
       case 2:  //on digital pin 6, PD7 - Mouse Button 3
-        currentButtonState = (PIND & 0b10000000) >> 7;
+        currentButtonState = (PIND & xPD7) >> 7;
         break;
     #ifdef axisFlip
       case 3:  //on digital pin 7, PE6 - Mouse Button 4
-        currentButtonState = (PINE & 0b01000000) >> 6;
+        currentButtonState = (PINE & xPE6) >> 6;
         break;
     #endif
 //      case 4:  //on digital pin 8, PB4 - Arcade Button 5
-//        currentButtonState = (PINB & 0b00010000) >> 4;
+//        currentButtonState = (PINB & xPB4) >> 4;
 //        break;
 //      case 5:  //on digital pin 9, PB5 - Arcade Button 6
-//        currentButtonState = (PINB & 0b00100000) >> 5;
+//        currentButtonState = (PINB & xPB5) >> 5;
 //        break;
 //      case 6:  //on digital pin 16, PB2 - Special Axis Button (internal function) - requires PB0 set to master or high
-//        currentButtonState = (PINB & 0b00000100) >> 2;
+//        currentButtonState = (PINB & xPB2) >> 2;
 //        break; 
 //      case 7:  //on digital pin 14, PB3 - 2nd Special Button 
-//        currentButtonState = (PINB & 0b00001000) >> 3;
+//        currentButtonState = (PINB & xPB3) >> 3;
 //        break; 
 //      case 8:  //on digital pin 10, PB6 - COIN/Select Button 9
-//        currentButtonState = (PINB & 0b01000000) >> 6;
+//        currentButtonState = (PINB & xPB6) >> 6;
 //        break;
 //      case 9:  //on digital pin 15, PB1 - PLAYER/Start Button 10
-//        currentButtonState = (PINB & 0b00000010) >> 1;
+//        currentButtonState = (PINB & xPB1) >> 1;
 //        break; 
       default: //Extra digital pins 16, PB2 and 14, PB3
         currentButtonState = 0b00000000;
