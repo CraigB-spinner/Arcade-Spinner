@@ -36,10 +36,12 @@
 
 // Port Bit/Pin layout   
 //      Bit -  76543210 - Silk screen ## - Micro-Controller
-#define xPB3 0b00001000 //Digital Pin 0  - Micro/PRO Micro - RX,  INT2
-#define xPB2 0b00000100 //Digital Pin 1  - Micro/PRO Micro - TX,  INT3
-#define xPB1 0b00000010 //Digital Pin 2  - Micro/PRO Micro - SDA, INT0
-#define xPB0 0b00000001 //Digital Pin 3  - Micro/PRO Micro - SCL, INT1
+#define xPD3 0b00001000 //Digital Pin 0  - Micro/PRO Micro - RX,  INT2
+#define xPD2 0b00000100 //Digital Pin 1  - Micro/PRO Micro - TX,  INT3
+#define xPD1 0b00000010 //Digital Pin 2  - Micro/PRO Micro - SDA, INT0
+#define xPD0 0b00000001 //Digital Pin 3  - Micro/PRO Micro - SCL, INT1
+#define xPD_10 (xPD1 | xPD0)
+#define xPD_32 (xPD3 | xPD2)
 #define xPD4 0b00010000 //Digital Pin 4  - Micro/PRO Micro
 #define xPC6 0b01000000 //Digital Pin 5  - Micro/PRO Micro
 #define xPD7 0b10000000 //Digital Pin 6  - Micro/PRO Micro
@@ -158,7 +160,7 @@ void pinChangeX() {
   //Set currQuadratureX to state of rotary encoder terminals A & B from input of PORTD bits 0 & 1 (digital pins 2 and 3)
   //You could do int currQuadratureX = (digitalRead(pinA) << 1) | digitalRead(pinB); to get the same thing, but it would be much slower.
   //Read current state 00AB.
-  int currQuadratureX = PIND & 0b00000011;
+  int currQuadratureX = PIND & xPD_10;
 
   //Store comboQuadratureX with previous and current quadrature rotary encoder states together. 
   //Combined previous/current states form two groups of four unique bit patterns indicating direction of movement.
