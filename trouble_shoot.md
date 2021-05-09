@@ -28,5 +28,7 @@ If button does not respond, confirm button wiring and port. Remember within the 
 When changing assigned button Port/Digital bit, corresponding pull-up resistor must be correctly set.  
 If pull-up resistor is set, Port/Digital bit will configure for button Input.  
 
-Mouse pointer movement will confirm Spinner/Trackball activity; if there's no movement, validate +ve/-ve power connections along with both A/B connections. Quadrature line output require working A/B signal pulses to convey direction and movement (each axis has a pair of signals assigned to either X or Y axes).  
+Mouse pointer movement will confirm Spinner/Trackball activity;  
+if there's no movement, validate +ve/-ve power connections along with both A/B connections.  
+Quadrature line output require working A/B signal pulses to convey direction and movement (each axis has a pair of signals assigned to either X or Y axes).  
 To change movement feel, select a different *#define* compiler directive within the code.
