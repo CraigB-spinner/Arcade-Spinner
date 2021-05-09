@@ -67,7 +67,7 @@ I am using Xbox A/B, X/Y configuration, Nintendo protocol is B/A, Y/X reversed c
 You can assign buttons to any assignment in RetroArch but it is best to pick a consistent pattern across all controllers to avoid confusion.  
 <br/>
 My [Finished Spinner](Pics/CraigB's%20Spinner.jpg) assembled within a DIY Fight Stick box.  
-Some [trouble shooting](trouble_shoot.md) help with your controller  
+Some [trouble shooting](trouble_shoot.md) with your controller  
 <br/>
 **The Code:**<br/>
 There are three versions of code: Pick your code to use
