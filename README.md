@@ -12,12 +12,11 @@ Here are some brandname Arduino boards:
 **Sept. 5/20:**  Uploaded my version of code from 2019; sourced June 27/19 and modified/optimized/bug fixed during summer 2019.<br/>
 **Sept. 11/20:** Uploaded revised code to allow switching of Spinner's X & Y axis - mod axisFlip directive to setup special button of choice. <br/>
 **Dec. 11/20:**  Uploaded new code for Mouse only Spinner operation. Note: all buttons can be inactivated for Spinner-Only operation.  
-**Dec. 16/20:**  Uploaded new code for override Joystick directions mod (using buttons for menu)<br/><br/>
-Updated readme from 'jmtw000' version with different component list...
+**Dec. 16/20:**  Uploaded new code for override Joystick directions mod (using buttons for menu)<br/>
 
-This project uses an Arduino Pro Micro clone, arcade spinner, with 8 buttons (up to 10). It maybe used with MAME or any other emulator which can use the X axis of the mouse as a paddle/spinner controller. The code should work on any board which uses the ATmega32U4 as long as the port pins are mapped to the same "digital pins". The spinner was created because it was a cheaper alternative to commercially available ones. I find it works well for ball and paddle games, like Tempest, and also makes a decent controller for driving games.
+This project uses an Arduino Pro Micro clone, arcade spinner, with 8 buttons (up to 10). It maybe used with MAME or any other emulator which can use the mouse X-axis as a paddle/spinner controller. Code should work on any board using an ATmega32U4 as long as port pins are mapped to same “digital pins” as Pro Micro. The DIY spinner was created as a cheaper alternative to commercially available devices. It works well with ball and paddle games, like Arkanoid, ever popular shooter Tempest, driving game like Pitstop and many other non-joystick controller games.
 
-To construct this, you will need a 2-phase rotary encoder which can operate at 5v and some momentary switch buttons plus Arduino micro-controller or Sparkfun Pro Micro - 5V version or similar clone.<br/> 
+To construct this, you will need a 2-phase rotary encoder which can operate at 5v along with your momentary switches affixed to an Arduino micro-controller like SparkFun Pro Micro - 5V version or similar clone.<br/> 
 [**Rotary encoder** used](https://www.amazon.ca/gp/product/B00IJ788AA/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1) (600 pulses/rev quadrature optical encoder = 2400 pulse spinner)<br/>
 [**Wheel** used](https://www.amazon.ca/gp/product/B07DPDJHR6/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1) (Generous 2.5" dia. aluminum/rubber weighted spinner, better than 1" guitar knobs)<br/>
 [**ATmega32U4** used](https://www.amazon.ca/gp/product/B01N4TVIQX/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1) (clone of SparkFun Pro Micro)<br/> 
@@ -36,7 +35,7 @@ In Arduino IDE:
 
 The Joystick library's examples will now appear under File > Examples > Joystick. <br/><br/>
 
-This device will be detected as both a mouse and a joystick/gamepad. The joystick only has X and Y axes which we don't use. At least one axis is needed by the library to declare the joystick and it was found that 2 were required for the controller to be detected on some systems (RetroPie). We just center the X and Y axes in setup() and forget about them. The spinner controls the mouse X axis which is by default mapped to the analog dial in MAME (don't forget to enable the mouse in MAME under advanced options!). The buttons will work as regular gamepad/joystick buttons. The 2400 different positions (transitions) that can be detected on the 600ppr(pulse per revolution) encoder I'm using are way too many for our purposes so they are halved in the code to 1200. The code uses the Atmega32u4 ports directly because that's faster than using digitalRead/Write. I'm not doing any debouncing of the buttons or encoder as it seems to work great for me as is, but you might want to add debouncing depending on your hardware.<br/><br/>
+This device will be detected as both mouse and gamepad/joystick. RetroPie requires joystick X/Y axes to be declared in library call for controller buttons to be detected. Just center X/Y axes in setup() and forget, later code versions use Button/Joystick override for RetroArch menu navigation. The spinner controls X-axis which by default is mapped to the mouse/analog dial in MAME (don't forget to enable mouse in MAME under advanced options!). Buttons will work as regular gamepad/joystick buttons. The spinner produces 2400 Quadrature pulses (transitions) from a 600ppr(pulse per revolution) encoder; that is excessive, so, the code halves the count to 1200. Code uses Atmega32u4 ports directly because that’s faster (over x30) than using digitalRead/Write. No button debouncing is setup, but can be added depending on your hardware issues.<br/><br/>
 
 **Extra info:**<br/>
 Wiring: [See diagram](Pics/Spinner%20Sketch_bb.jpg)<br/>
