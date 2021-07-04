@@ -17,7 +17,9 @@ Here are some brandname Arduino boards:
 This project uses an Arduino Pro Micro clone, arcade spinner, with 8 buttons (up to 10). It maybe used with MAME or any other emulator which can use the mouse X-axis as a paddle/spinner controller. Code should work on any board using an ATmega32U4 as long as port pins are mapped to same “digital pins” as Pro Micro. The DIY spinner was created as a cheaper alternative to commercially available devices. It works well with ball and paddle games, like Arkanoid, ever popular shooter Tempest, driving game like Pitstop and many other non-joystick controller games.
 
 To construct this, you will need a 2-phase rotary encoder which can operate at 5v along with your momentary switches affixed to an Arduino micro-controller like SparkFun Pro Micro - 5V version or similar clone.<br/> 
-[**Rotary encoder** used](https://www.amazon.ca/gp/product/B00IJ788AA/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1) (600 pulses/rev quadrature optical encoder = 2400 pulse spinner)<br/>
+[**Rotary encoder** used](https://www.amazon.ca/gp/product/B00IJ788AA/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1) 
+[<sub>1</sub>](/Pics/Spinner_600ppr.jpg) 
+[<sub>2</sub>](/Pics/Spinner_600ppr_2.jpg) (600 pulses/rev quadrature optical encoder = 2400 pulse spinner)<br/>
 [**Wheel** used](https://www.amazon.ca/gp/product/B07DPDJHR6/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1) 
 [<sub>1</sub>](/Pics/200mm_Aluminum_Wheel.jpg) 
 [<sub>2</sub>](/Pics/200mm_Aluminum_Wheel_2.jpg) (Generous 2.5" dia. aluminum/rubber weighted spinner, better than 1" guitar knobs)<br/>
