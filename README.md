@@ -81,7 +81,9 @@ There are three versions of code: Pick your code to use
 - Special Mouse only version with & without Mouse buttons - no Joystick buttons  
   - [Spinner_L-C-R-Button_Special.ino](Spinner_L-C-R-Button_Special.ino)
 - Standard Mouse and Joystick buttons version - mod Joystick directions (use buttons for menu)
-  - [Spinner_8-Button-mod.ino](Spinner_8-Button-mod.ino)<sub> 1.</sub><br/>
+  - [Spinner_8-Button-mod.ino](Spinner_8-Button-mod.ino)<sub> 1.</sub>
+- Special Mouse only version - no buttons  
+  - [Spinner_No-Button.ino](Spinner_No-Button.ino)<br/>
 
 <sub>1. Use of TTP223 Capacitive Touch switches to control special functions: the 
 "[Touch Switches](Pics/Double%20Touch.jpg)"   
