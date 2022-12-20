@@ -85,7 +85,7 @@ There are four versions of code: Pick your code to use
 - Special Mouse only version - no buttons  
   - [Spinner_No-Button.ino](Spinner_No-Button.ino)
 - Special Mouse vari-SpinSpeed version - TBD buttons  
-  - [Spinner_6-Button.ino](Spinner_6-Button.ino)<br/>
+  - [Spinner_6-Button-MiSTer.ino](Spinner_6-Button-MiSTer.ino)<br/>
 
 <sub>1. Use of TTP223 Capacitive Touch switches to control special functions: the 
 "[Touch Switches](Pics/Double%20Touch.jpg)"   
