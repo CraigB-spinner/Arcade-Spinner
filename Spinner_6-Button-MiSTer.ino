@@ -8,7 +8,7 @@
 *                   Craig B - Added code for spinner movement NORM/ACCS/ACCX, RetroPi fix - July 2019         
 *                   Craig B - Added code for spinner axis change from early Sept 2020   
 *                   Craig B - Added code for joystick override using buttons from mid Dec 2020   
-*                   Craig B - New code for spinner Vari-Spin movement ACCX
+*                   Craig B - New code for spinner Vari-Spin movement ACCX from end Dec 2022
 *    
 *    This program is free software: you can redistribute it and/or modify
 *    it under the terms of the GNU General Public License as published by
