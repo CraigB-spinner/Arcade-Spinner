@@ -94,7 +94,7 @@ void setup() {
   //PORTF = 0b11000000; //Digital pin A0(7) & A1(6). A2(5), A3(4) 
   //
 #ifdef axisFlip       // D16 - PB2 & PB0 hi
-  PORTB = 0b00000101; //(Toggle Axis)
+  PORTB = 0b00001101; //(Toggle Axis)
 #else
   PORTB = 0b00000000; //(No Button input)
 #endif  
@@ -250,7 +250,8 @@ void loop(){
 
   //on digital pin 16, PB2 - Special Axis Button (internal function) 
   //                       - requires PB0 set to master or high
-  currentButtonState = (PINB & xPB2) >> 2;
+  //currentButtonState = (PINB & xPB2) >> 2; //D16
+  currentButtonState = (PINB & xPB3) >> 3; //D17
 
   //If the current state of pin for button/toggle is different than last time, 
   //change x/y axis by flipping axis
