@@ -26,7 +26,8 @@ To construct this, you will need a 2-phase rotary encoder which can operate at 5
 [](https://www.amazon.ca/gp/product/B07DPDJHR6/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1) 
 [<sub>1</sub>](/Pics/200mm_Aluminum_Wheel.jpg) 
 [<sub>2</sub>](/Pics/200mm_Aluminum_Wheel_2.jpg) (Generous 2.5" dia. aluminum/rubber weighted spinner, better than 1" guitar knobs)<br/>
-[**ATmega32U4** used](https://www.amazon.ca/gp/product/B01N4TVIQX/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1) (clone of SparkFun Pro Micro)<br/> 
+[**ATmega32U4** used](https://www.amazon.ca/gp/product/B01N4TVIQX/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1) 
+[<sub>1</sub>](/Pics/Spinner_600ppr.jpg) (clone of SparkFun Pro Micro)<br/> 
 [**Arcade Box** used](https://www.amazon.ca/gp/product/B07HRS9BFK/ref=ppx_yo_dt_b_asin_image_o01_s00?ie=UTF8&psc=1) 
 [<sub>1</sub>](/Pics/Fightbox.jpg) (convenient plastic fightstick box)<br/><br/>
 
@@ -100,7 +101,8 @@ Sanwa - 2.8mm(0.110") or Suzo-Happ - 4.8mm(0.187") female spade crimp connectors
 3 - 3x12mm Countersunk Machine Head Screws (sourced from Traxxas 2552 hobby parts); cut to length with dremel; uses same Allen wrench as grub screw with noted wheel.  
 Lexan sheet 0.060" thick, size 95x53mm(3.75x2.1") or aluminum/steel sheet cut to same size of Sanwa JLF-P1 mounting plate. I don't recommend using joystick plate as holes are located at 90° and rotary encoder mounts at 120° (28-30mm dia. M3 mounts with 20mm dia. raised bearing hub).  
 Clear Lexan makes visibility easier for fabrication.  
-Special function switches with [TTP223 Capacitive Touch Switch](https://www.amazon.ca/gp/product/B07JDH7KHN/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1)<sub> [1](Pics/Cap_touch.jpg)</sub><br/>
+Special function switches with [TTP223 Capacitive Touch Switch](https://www.amazon.ca/gp/product/B07JDH7KHN/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1)
+<sub>[1](Pics/Cap_touch.jpg)</sub><br/>
 
 **For the more observant** in pictures ["Inside Spaghetti"](Special%20Testing%20Pics/Inside%20spaghetti.jpg) and ["Arduino Beauty Shot"](Special%20Testing%20Pics/Arduino%20beauty%20shot.jpg) there's an extra wire harness and aligator clip hooking to Gnd. TX0 & RX1 are wired to the y-axis of a proto-type [Trackball](https://www.amazon.ca/gp/product/B00F1YQH6G/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1) setup. Arduino code has been modified, tested and confirmed to work. No stutter or lag as using only USB protocol to RetroPie. No PS/2 Protocol overhead. I will be working on enclosure to finish new controller for games like **Centipede**, **Marble Madness**, **Crystal Castles**, and others.  
 See the Trackball project [here](https://craigb-spinner.github.io/Arcade-Trackball/)  
