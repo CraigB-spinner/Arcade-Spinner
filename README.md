@@ -112,8 +112,6 @@ See the Trackball project [here](https://craigb-spinner.github.io/Arcade-Trackba
 
 ![RetroPie Logo](Pics/RetroPie%20Logo.png) RetroPie [laggy spinner/trackball](laggy_mouse.md) issues <br/>
 
-ABC [X](x_file.md) page <br/>
-
 How to configure [**MAME Games**](MAME_Game_Config.md) Spinner Sensitivity <br/>
 
 **More pictures:**  
