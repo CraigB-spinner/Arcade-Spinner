@@ -110,7 +110,9 @@ See the Trackball project [here](https://craigb-spinner.github.io/Arcade-Trackba
 **Video:**  
 [**Spinner in Action**](https://www.youtube.com/watch?v=HmqkHAPZHQA) playing **Tempest**<br/>
 
-![RetroPie Logo](Pics/RetroPie%20Logo.png) RetroPie [laggy spinner/trackball](laggy_mouse.md) issues
+![RetroPie Logo](Pics/RetroPie%20Logo.png) RetroPie [laggy spinner/trackball](laggy_mouse.md) issues <br/>
+
+How to configure [**MAME Games**](MAME%20Game%20Config.md) Spinner Sensitivity <br/>
 
 **More pictures:**  
 My Arcade Spinner assembled within a DIY Fight Stick box -  
