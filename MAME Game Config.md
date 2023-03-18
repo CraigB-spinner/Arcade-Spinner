@@ -1,3 +1,5 @@
+**On your computer, or RetroPie**  
+
 **to setup a game** in MAME the spinner needs to be adjusted </BR>
 from 1 thru 255 where 100 is 100% or 1-to-1, no change. </BR>
 **UltiMarc** & **Groovy Game Gear** Spinners both run at 1200 PPR, </BR>
