@@ -112,7 +112,7 @@ See the Trackball project [here](https://craigb-spinner.github.io/Arcade-Trackba
 
 ![RetroPie Logo](Pics/RetroPie%20Logo.png) RetroPie [laggy spinner/trackball](laggy_mouse.md) issues <br/>
 
-How to configure [**MAME Games**](MAME%20Game%20Config.md) Spinner Sensitivity <br/>
+How to configure [**MAME Games**](MAME_Game_Config.md) Spinner Sensitivity <br/>
 
 **More pictures:**  
 My Arcade Spinner assembled within a DIY Fight Stick box -  
