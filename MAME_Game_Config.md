@@ -12,7 +12,7 @@ To make a change to Game sensitivity:
 - Select **'Dial Sensitivity'** <BR/>
   
               Orig. Spinner PPR <BR/>
-**Adj %** = --------------------    x  100 <BR/>
+**Adj %** = --------------------------    x  100 <BR/>
               Your Spinner PPR <BR/>
   
 List of [Games](Spinner%20Games.pdf) **Adj %** <BR/>
