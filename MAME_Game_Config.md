@@ -18,6 +18,6 @@ To make a change to Game sensitivity:
 List of [Games](Spinner%20Games.pdf) **Adj %** <BR/>
 
 **Major Havov** has a special rare Roller controller, a video from John's Arcade showed a close-up of the Urethane rubber wheel in contact with metal roller which drives the pin-wheel (24T) optical sensor. This is similar to measuring a Trackball's Ball to Roller diameter ratio as in the calculation, you toss out the value of 𝜋 as to the scale of video image. <BR/>
-The ratio measured on a monitor (scale 1½ to John's thumb) was 3.250" / 0.635" = 5.2 x 24T = 124.8 PPR approx. <BR/>
+The ratio measured on a monitor (scale 1½ to John's thumb) was 3.250" / 0.625" = 5.2 x 24T = 124.8 PPR approx. <BR/>
 
 [Video](https://www.youtube.com/watch?v=0_aIkkObZWM&t=2s) on 'Accurate Spinner Sensitivity in MAME' <BR/>
