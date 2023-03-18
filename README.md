@@ -72,7 +72,7 @@ Vcc |     |+5v - Red/White
 14  |D14  |Switch: Joystick Opt. <br/>
 
 I am using Xbox A/B, X/Y configuration, Nintendo protocol is B/A, Y/X reversed controls. (Japanese cultural differences) 
-You can assign buttons to any assignment in RetroArch but it is best to pick a consistent pattern across all controllers to avoid confusion.  
+You can assign buttons to any assignment in RetroArch but it is best to pick a consistent pattern across all controllers to avoid confusion. I searched the web for button layout, picked an Xbox A/B, X/Y sideways 'S-pattern' starting at top left, yes a fluke.  
 <br/>
 My [Finished Spinner](Pics/CraigB's%20Spinner.jpg) assembled within a DIY Fight Stick box.  
 Some [trouble shooting](trouble_shoot.md) with your controller  
