@@ -14,6 +14,4 @@ To make a change to Game sensitivity:
               Your Spinner PPR </BR>
   
   List of [Games](Spinner%20Games.pdf) **Adj %** </BR>
-  [Video](https://www.youtube.com/watch?v=0_aIkkObZWM&t=2s) </BR>
-  
-  | Mr.\ Dervieux
+  [Video](https://www.youtube.com/watch?v=0_aIkkObZWM&t=2s) on 'Accurate Spinner Sensitivity in MAME' </BR>
