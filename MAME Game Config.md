@@ -13,7 +13,7 @@ To make a change to Game sensitivity:
 **Adj %** = --------------------    x  100 </BR>
               Your Spinner PPR </BR>
   
-  [Games] (Spinner%20Games.pdf) </BR>
+  List of [Games](Spinner%20Games.pdf) **Adj %** </BR>
   [Video](https://www.youtube.com/watch?v=0_aIkkObZWM&t=2s) </BR>
   
   | Mr.\ Dervieux
