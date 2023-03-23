@@ -29,7 +29,7 @@ To construct this, you will need a 2-phase rotary encoder which can operate at 5
 [Alternate **Knob**](https://www.amazon.ca/gp/product/B087M2QCC2?ref=ppx_pt2_dt_b_prod_image)
 [<sub>1</sub>](/Pics/Mxuteuk_Black_AL_Knob_Top.jpg) 
 [<sub>2</sub>](/Pics/Mxuteuk_Black_AL_Knob_Side.jpg) 
-[<sub>3</sub>](/Pics/Mxuteuk_Black_AL_Knob_Bottom.jpg) (1.5" dia. aluminum 32g spinner knob for Breakout/Arkanoid, from Electric Guitar Bass)<br/>
+[<sub>3</sub>](/Pics/Mxuteuk_Black_AL_Knob_Bottom.jpg) (1.5" dia. aluminum 32g spinner knob for Breakout/Arkanoid)<br/>
 [**ATmega32U4** used](https://www.amazon.ca/gp/product/B01N4TVIQX/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1) 
 [<sub>1</sub>](Pics/Arduino%20Pro%20Micro%20Atmega32u4.jpg) (clone of SparkFun Pro Micro) <br/> 
 [**Arcade Box** used](https://www.amazon.ca/gp/product/B07HRS9BFK/ref=ppx_yo_dt_b_asin_image_o01_s00?ie=UTF8&psc=1) 
