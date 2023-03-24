@@ -15,4 +15,11 @@ You choose if you want to spend another 5¢ - 10¢ on the project. <BR/>
 no more than 100mA for a single port,  
 PortB (pins 8,9,10,14,15,16), PortD (pins 0,1,2,3,4,6) are critical with 6 pins, PortC, PortE are single pins  
 and no more than 200mA for the whole board. <BR/> <BR/>
-**NO Button Mashing**
+**NO Button Mashing**  
+For pins 8,9,10,14,15,16 of PortB if you added a 330Ω resistor in series,  
+it will cap each to 15.2mA or total of 91mA. <BR/>
+For pins 0,1,2,3 of PortD which in software handles spinner/trackball X & Y axes thru A/B interrupts,  
+there is a larger risk of overloading port limits. Device may have each A/B pin pulled low for extend periods.  
+A 390Ω resistor in series will cap each to 12.8mA or total of 51.3mA and  
+pins 4 & 6 with a 330Ω resistor in series will add another 30.3mA for a 81.6mA total. <BR/>
+These precautions will result in a longer life of the MCU internal circuits.
