@@ -27,4 +27,5 @@ pins 4 & 6 with a 330Ω resistor in series will add another 30.3mA for a 81.6mA 
 These precautions will result in a longer life of the MCU internal circuits. <BR/> <BR/>
 A Spinner using pins 2 & 3 with two buttons A & B with Start(Player) & Select(Coin) pins 5, 7, 8 & 9  
 will never have issues as load is spread across four Ports B, C, D & E.
-<BR/>
+<BR/> <BR/>
+The more buttons or functions you add, higher the risk to overloading the MCU limits.
