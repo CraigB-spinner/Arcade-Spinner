@@ -24,4 +24,7 @@ thru A/B interrupts, there is a larger risk of overloading port limits.
 Device may have each A/B pin pulled low for extend periods.  
 A 390Ω resistor in series will cap each to 12.8mA or total of 51.3mA and  
 pins 4 & 6 with a 330Ω resistor in series will add another 30.3mA for a 81.6mA total. <BR/>
-These precautions will result in a longer life of the MCU internal circuits.
+These precautions will result in a longer life of the MCU internal circuits. <BR/> <BR/>
+A Spinner using pins 2 & 3 with two buttons A & B with Start(Player) & Select(Coin) pins 5, 7, 8 & 9  
+will never have issues as load is spread across four Ports B, C, D & E.
+<BR/>
