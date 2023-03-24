@@ -32,7 +32,8 @@ To construct this, you will need a 2-phase rotary encoder which can operate at 5
 [<sub>3</sub>](/Pics/Mxuteuk_Black_AL_Knob_Bottom.jpg) (1.5" dia. aluminum 32g spinner knob for Breakout/Arkanoid)<br/>
 [**ATmega32U4** used](https://www.amazon.ca/gp/product/B01N4TVIQX/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1) 
 [<sub>1</sub>](Pics/Arduino%20Pro%20Micro%20Atmega32u4.jpg) (clone of SparkFun Pro Micro) <br/> 
-[**Arcade Box** used](https://www.amazon.ca/gp/product/B07HRS9BFK/ref=ppx_yo_dt_b_asin_image_o01_s00?ie=UTF8&psc=1) 
+[**Arcade Box** used](https://www.amazon.ca/Acrylic-Arcade-Combination-Fighting-Computer/dp/B0B4X62FK9/ref=sr_1_25?crid=2DW3BTJZ9Q4NV&keywords=Black+Acrylic+Arcade&qid=1679618400&s=toys&sprefix=black+acrylic+arcade%2Ctoys%2C85&sr=1-25)
+[](https://www.amazon.ca/gp/product/B07HRS9BFK/ref=ppx_yo_dt_b_asin_image_o01_s00?ie=UTF8&psc=1) 
 [<sub>1</sub>](/Pics/Fightbox.jpg) (convenient plastic fightstick box)<br/><br/>
 
 You will need Arduino joystick library at: [https://github.com/MHeironimus/ArduinoJoystickLibrary](https://github.com/MHeironimus/ArduinoJoystickLibrary) <br/>
