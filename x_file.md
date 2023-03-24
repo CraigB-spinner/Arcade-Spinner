@@ -28,4 +28,5 @@ These precautions will result in a longer life of the MCU internal circuits. <BR
 A Spinner using pins 2 & 3 with two buttons A & B with Start(Player) & Select(Coin) pins 5, 7, 8 & 9  
 will never have issues as load is spread across four Ports B, C, D & E.
 <BR/> <BR/>
-The more buttons or functions you add, higher the risk to overloading the MCU limits.
+The more buttons or functions you add, higher the risk to overloading the MCU limits. <BR/> <BR/>
+[**Atmel ATmega16U3/ATmega32U4** excerpt](x_file.md)
