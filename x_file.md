@@ -17,8 +17,9 @@ PortB (pins 8,9,10,14,15,16) & PortE (pin 7), PortD (pins 0,1,2,3,4,6) are criti
 PortC is a single pin  
 and no more than 200mA for the whole board. <BR/> <BR/>
 **NO Button Mashing**  
-For pins 8,9,10,14,15,16 of PortB if you added a 330Ω resistor in series,  
-it will cap each to 15.2mA or total of 91mA. <BR/>
+For pins 8,9,10,14,15,16 of PortB and pin 7 of PortE if you added a 330Ω resistor in series,  
+it will cap each to 15.2mA or total of 106.4mA but I use touch pads, TTP223, on pins 14 & 16.  
+The TTP223 chip is capable of Sink Current IOL = 8 mA, so, 15.2 x 5 + 8 x 2 = 92mA <BR/>
 For pins 0,1,2,3 of PortD which in software handles spinner/trackball X & Y axes  
 thru A/B interrupts, there is a larger risk of overloading port limits.  
 Device may have each A/B pin pulled low for extend periods.  
