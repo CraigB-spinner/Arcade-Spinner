@@ -13,7 +13,8 @@ You choose if you want to spend another 5¢ - 10¢ on the project. <BR/>
 **Part II: Protect your Arduino (ATmega32U4) board.**  
 40mA per pin,  
 no more than 100mA for a single port,  
-PortB (pins 8,9,10,14,15,16), PortD (pins 0,1,2,3,4,6) are critical with 6 pins, PortC, PortE are single pins  
+PortB (pins 8,9,10,14,15,16), PortD (pins 0,1,2,3,4,6) are critical with 6 pins,  
+PortC, PortE are single pins  
 and no more than 200mA for the whole board. <BR/> <BR/>
 **NO Button Mashing**  
 For pins 8,9,10,14,15,16 of PortB if you added a 330Ω resistor in series,  
