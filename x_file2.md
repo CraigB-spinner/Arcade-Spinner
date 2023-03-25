@@ -1,4 +1,4 @@
-<H2 align="center"><b> Atmel ATmega16U3/ATmega32U4 technical doc excerpt </b></H2>
+<H2 align="center"><b> Atmel ATmega16U4/ATmega32U4 technical doc excerpt </b></H2>
 
 **DC Characteristics** <BR/> <BR/> 
 DC Current per I/O Pin ..................................... max  40.0 mA <BR/>
