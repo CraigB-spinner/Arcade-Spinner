@@ -10,7 +10,7 @@ There is a 10Ω smd resistor in series to the collector and A & B wired phase ou
 That is 0.5A @ 5V. Is the transistor rated for 500mA? I played it safe and added another resistor in series. 
 You choose if you want to spend another 5¢ - 10¢ on the project. <BR/>
 
-**Part II: Protect your [Arduino (ATmega32U4) board](Pics/Pro_Micro_pinout-Sparkfun-33%.jpg).**  
+**Part II: Protect your [Arduino (ATmega32U4) board]('Pics/Pro_Micro_pinout-Sparkfun-33%.jpg').**  
 40mA per pin,  
 no more than 100mA for a single port,  
 PortB (pins 8,9,10,14,15,16) & PortE (pin 7), PortD (pins 0,1,2,3,4,6) are critical with 6-7 pins,  
