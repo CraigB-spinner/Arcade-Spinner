@@ -55,11 +55,12 @@ This device will be detected as both mouse and gamepad/joystick. RetroPie requir
 Wiring: [See diagram](Pics/Spinner%20Sketch_bb.jpg)<br/>
 Vcc (+5V) and Gnd<br/>
 Spinner A & B rotary output wires red and green. [see picture](Pics/Inside%20guts%20of%20spinner.jpg) <br/>
-Note: resistor used in series to limit current around 10mA (390Ω	- 470Ω) - [**Pop goes the Triode**](x_file.md)  
 <sub>DC Current per I/O Pin ………………………………. max 40.0 mA</sub>  
 <sup>DC Current VCC and GND Pins …………………. max 200.0 mA</sup>  
-<sub>Heed the manufacture's warning (Atmel Corp. now Microchip) and never short a pin to Gnd or Vcc. I have used an USB meter that contradicts any major </sub>  
-<sup>current change when input pins are pulled high internally by ATmega32U4 MCU and later shorted to Gnd. It is still safer to limit unknown current flow.</sup><BR/>
+Note: resistor used in series to limit current around 10mA (390Ω	- 470Ω) - [**Pop goes the Triode**](x_file.md)  
+<sub>Heed the manufacture's warning (Atmel Corp. now Microchip) and never short a pin to Gnd or Vcc. I have used an USB meter that</sub>  
+<sup>contradicts any major current change when input pins are pulled high internally by ATmega32U4 MCU and later shorted to Gnd.</sup><BR/>
+It is still safer to limit unknown current flow.  
 I advise you double check Vcc(5-24v power - Wht) and Gnd(Blk) wire colours as some chinese factories are colour blind. {Alternate wiring: *A-Grn, B-Wht, Vcc-Red, Gnd-Blk*}<br/>
 Buttons 1-6(turned CW 'S-pattern'), plus 9-select(coin), and 10-start(player)<br/>
 
