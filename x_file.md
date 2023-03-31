@@ -25,7 +25,15 @@ thru A/B interrupts, there is a larger risk of overloading port limits.
 Device may have each A/B pin pulled low for extend periods.  
 A 390Ω resistor in series will cap each to 12.8mA or total of 51.3mA and  
 pins 4 & 6 with a 330Ω resistor in series will add another 30.3mA for a 81.6mA total. <BR/>
-These precautions will result in a longer life of the MCU internal circuits. <BR/> <BR/>
+These precautions will result in a longer life of the MCU internal circuits. <BR/> 
+As in life, you usually find out info too late, I retro-fitted the eight buttons with resistors on the ground side using either 390Ω or 150Ω + 220Ω = 370Ω.  
+Isollated group of Coin & Play buttons - 5V / 390Ω = 12.8mA x 5V = 64.1 mW x 2 = 128.2mW which is under 1/4W resistor rating.
+Main group of A, B, X, Y, L, R buttons, top set of X, Y, L and bottom set of A, B, R with each set using 150Ω and later combined to 220Ω.
+Each resistor will have a portion of voltage drop through it from 5V total but flow the total current of 5V / (150Ω + 220Ω) = 13.5mA.
+V x A = (150Ω / (150Ω + 220Ω)) x 5V x 13.5mA = 27.4mW x 3 = 80.1mW, top/bottom 150Ω resistors under 1/4W resistor rating.
+V x A = (220Ω / (150Ω + 220Ω)) x 5V x 13.5mA = 40.1mW x 2 = 80.3mW, series 220Ω resistor under 1/4W resistor rating.
+
+or 150Ω + 220Ω = 370Ω<BR/> <BR/>
 A Spinner using pins 2 & 3 with two buttons A & B with Start(Player) & Select(Coin) pins 5, 7, 8 & 9  
 will never have issues as load is spread across four Ports B, C, D & E.
 <BR/> <BR/>
