@@ -18,5 +18,5 @@ Reverse the SPST switch contacts red & black (with extra yellow lead) wires and 
 <br/>
 More current USB Encoder model(s) may have +5V sockets (red Jst Xh) on board.  
 
-If you are using an Arduino MCU the inputs are pulled-high for input then shorted to Gnd (Pin current limit of 40mA, use a 390Ω - 470Ω resistor to be safe).
+If you are using an Arduino MCU the inputs are pulled-high for input then shorted to Gnd (Input Pin current limit of 40mA, use a 390Ω - 470Ω resistor to be safe).
 Both sides of the LED must be +5V and Button (SPST switch) supplies Gnd to pull the input low and trigger a button-press. Arduino MCUs use common Gnd for inputs which is reverse to Zero Delay USB Encoders. Wiring must adjust to new common.
