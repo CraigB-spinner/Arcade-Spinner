@@ -1,4 +1,4 @@
-Using 24mm illuminated buttons, I used a DYMO LetraTag with clear lables  
+Using 24mm illuminated buttons, I used a DYMO LetraTag with clear labels  
 Coin in Large Bold text, Play & Exit in Medium Bold text<br/>
 [![A](Pics/Coin-Play-Exit/TNx2/IMG_2036.JPG)](Pics/Coin-Play-Exit/IMG_2036.JPG) <br/>
 <sup>Coin(Select), Play(Start), Exit(Hotkey)</sup> <br/>
