@@ -10,8 +10,11 @@ Coin in Large Bold text, Play & Exit in Medium Bold text<br/>
 <sup>Zero Delay USB Encoder CY-822A</sup> <br/>
 You will need to add an extra socket (Jst Xh 2.5-2 Pin Connector Plug Female/Male type)  
 and wire a parallel chain of power leads 24-26AWG with 2.8mm Female Spade connectors to LED +ve/Gnd contacts.  
-
-More current model may have +5V sockets on board
+Lite-when-pressed blue Exit button has special wiring.  
+Since Zero Delay USB Encoder uses common +ve, and Key inputs are pulled-low,  
+when the button is pressed, input signal will short to +5v (high to the MCU glob-top).  
+Reverse the SPST switch contacts red & black (with extra yellow lead) wires and connect the yellow wire to LED +ve contact. The LED Gnd will use the black daisy chain wire.
+More current USB Encoder model(s) may have +5V sockets (red Jst Xh) on board.  
 
 2.8mm Female Spade
 Jst Xh 2.5-2 Pin Connector Plug Female/Male
