@@ -104,7 +104,7 @@ There are five versions of code: Pick your code to use
 "[Touch Switches](Pics/Double%20Touch.jpg)"   
 Note: Invert the Touch I/O state by shorting [contact A to Vcc](Pics/TTP223B_chip_side.jpg), and/or contact B to activate on/off toggle mode.</sub>  
 
-**[Coin, Play & Special Buttons](https://craigb-spinner.github.io/Arcade-Trackball/Coin-Play-Exit.html)**<br/>
+**[Coin, Play & Special Buttons](https://craigb-spinner.github.io/Arcade-Spinner/Coin-Play-Exit.html)**<br/>
 <br/>
 **Oops - I bricked my [Bootloader](https://craigb-spinner.github.io/Arcade-Trackball/Changing_Fuse_Bits.html)!**  
 <sup>Navigate to bottom of page - same title.</sup>
