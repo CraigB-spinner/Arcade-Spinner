@@ -17,7 +17,7 @@ Lit-when-pressed blue Exit button has special wiring.
 Since Zero Delay USB Encoder uses common +ve, and Key inputs are pulled-low,  
 when button is pressed, input signal will short to +5V (high to the MCU glob-top).  
 Reverse the SPST switch contacts red & black (with extra yellow lead) wires and connect the yellow wire to LED +ve contact. The LED Gnd will use the black daisy chain wire. What is happening: LED cathode is connected to Gnd (normal), but Anode is connected to input signal which is pulled-low by the MCU. Both side are Gnd and LED does not light. When you press the button, you short input signal to +5V, which is jumpered to LED anode, the LED glows.  
-For 3 wire Zero Delay USB Encoder CY-822B with Black-Yellow-Red (always-on) sockets change wires to Yellow-Black-Red (lit-when-pressed) in socket. (Note: wire polarity of Red & Black are reversed from colour standard where harnesses are Red is Gnd, Black is +5V, Yellow (center pin) is signal pin)    
+For 3 wire Zero Delay USB Encoder CY-822B with Black-Yellow-Red (always-on) sockets change wiring to Yellow-Black-Red (lit-when-pressed) in socket. (Note: wire polarity of Red & Black are reversed from colour standard where harnesses are Red is Gnd, Black is +5V, Yellow (center pin) is pin signal.)    
 <br/>
 More current USB Encoder model(s) may have +5V sockets (red Jst Xh) on board.  
 <br/> 
