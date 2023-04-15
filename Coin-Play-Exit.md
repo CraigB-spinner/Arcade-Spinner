@@ -21,7 +21,7 @@ Reverse the SPST switch contacts red & black (with extra yellow lead) wires and 
 For 3 wire Zero Delay USB Encoder CY-822B with Black-Yellow-Red (always-on) sockets change wiring to Yellow-Black-Red (lit-when-pressed) in socket. (Note: wire polarity of Red & Black are reversed from colour standard where harnesses are Red is Gnd, Black is +5V, Yellow (center pin) is pin signal.)
 <sub> Blog [Here](http://cy-822b.blogspot.com/2016/08/the-cy-822b-usb-led-joystick-controller.html)</sub>  
 ![Always-on](Pics/Coin-Play-Exit/1-always-on.JPG) ![Lit-when-pressed](Pics/Coin-Play-Exit/2-lit-when-pressed.JPG) <br/>
-&nbsp; &nbsp; &nbsp; &nbsp; <sup>Always-on &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Lit-when-pressed</sup> <br/> 
+&nbsp; &nbsp; &nbsp; &nbsp; <sup>Always-on &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Lit-when-pressed</sup> <br/> 
 <br/>
 More current USB Encoder model(s) may have +5V sockets (red Jst Xh) on board.  
 <br/> 
