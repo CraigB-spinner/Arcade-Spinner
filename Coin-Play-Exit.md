@@ -13,8 +13,8 @@ Coin in Large Bold text, Play & Exit in Medium Bold text<br/>
 You will need to add an extra socket (Jst Xh 2.5-2 Pin Connector Plug Female/Male type)  
 and wire a parallel chain of power leads 24-26AWG with 2.8mm Female Spade connectors to LED +ve/Gnd contacts.  
 <br/>
-Lit-when-pressed blue Exit button has special wiring, using more common 2 wire Zero Delay USB Encoder CY-822A.  
-Since Zero Delay USB Encoder uses common +ve, and Key inputs are pulled-low,  
+Lit-when-pressed blue Exit button has special wiring, using more common 2 wire Zero Delay USB Encoder CY-822A. 
+USB Encoder uses common +ve, and Key inputs are pulled-low,  
 when button is pressed, input signal will short to +5V (high to the MCU glob-top).  
 Reverse the SPST switch contacts red & black (with extra yellow lead) wires and connect the yellow wire to LED +ve contact. The LED Gnd will use the black daisy chain wire. What is happening: LED cathode is connected to Gnd (normal), but Anode is connected to input signal which is pulled-low by the MCU. Both side are Gnd and LED does not light. When you press the button, you short input signal to +5V, which is jumpered to LED anode, the LED glows.  
 <br/>
