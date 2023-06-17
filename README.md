@@ -96,8 +96,8 @@ Pin |Data |Button/wire  |Code
 9   |D9   |Button 6 - R
 10  |D10  |Button 9 - Select
 15  |D15  |Button 10 - Start
-Gnd |     |Gnd - Black
-Vcc |     |+5v - Red
+Gnd |     |Gnd - Black/Blk
+Vcc |     |+5v - Red/see above
 16  |D16  |Switch: Axis Flip Opt.
 14  |D14  |Switch: Joystick Opt. <br/>
 
