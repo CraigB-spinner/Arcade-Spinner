@@ -70,7 +70,7 @@ Vcc	 |White		|白色的	 |白色的
 Gnd	 |Black		|黑色的	 |黑色的	
 A/2  |Red			|紅色的	 |红色的	
 B/3	 |Green		|綠色的	 |绿色的 
----  |Coloured| 色的
+---  |Coloured| 色的  <br/>
 
 Using rotary encoder HQK38H6-500N-G5-24 {Alternate wiring: *A-Grn, B-Wht, Vcc-Red, Gnd-Blk*} <br/>
 <sup>Note: On Pro Micro, J1 may require solder short to bypass diode/regulator, so rotary encoder electronics receive full 5V USB source.</sup> <br/>
@@ -80,14 +80,14 @@ Vcc  |Red			|紅色的	 |红色的
 Gnd	 |Black		|黑色的	 |黑色的	
 A/2	 |White		|白色的	 |白色的	
 B/3	 |Green		|綠色的	 |绿色的 
----  |Coloured| 色的
+---  |Coloured| 色的  <br/>
 
 Buttons 1-6(turned CW 'S-pattern'), plus 9-select(coin), and 10-start(player)<br/>
 
 Pin |Data |Button/wire  |Code  
 --- |---- |------------ |----  
-2   |D2   |X<sub>A</sub> spinner -  |PinA  
-3   |D3   |X<sub>B</sub> spinner -  |PinB  
+2   |D2   |X<sub>A</sub> spinner - see  |PinA  
+3   |D3   |X<sub>B</sub> spinner - above |PinB  
 4   |D4   |Button 1 - X
 5   |D5   |Button 2 - A
 6   |D6   |Button 3 - B
