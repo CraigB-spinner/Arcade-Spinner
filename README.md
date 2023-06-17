@@ -61,13 +61,33 @@ Note: resistor used in series to limit current around 10mA (390Ω	- 470Ω) - [**
 <sub>Heed the manufacture's warning (Atmel Corp. now Microchip) and never short a pin to Gnd or Vcc. I have used an USB meter that</sub>  
 <sup>contradicts any major current change when input pins are pulled high internally by ATmega32U4 MCU and later shorted to Gnd.</sup><BR/>
 It is still safer to limit unknown current flow.  
-I advise you double check Vcc(5-24v power - Wht) and Gnd(Blk) wire colours as some chinese factories are colour blind. {Alternate wiring: *A-Grn, B-Wht, Vcc-Red, Gnd-Blk*}<br/>
+I advise you double check Vcc(5-24v power - Wht) and Gnd(Blk) wire colours as some chinese factories are colour blind. <br/>
+
+Using rotary encoder H38S360B 5-24V {wiring: *A-Red, B-Grn, Vcc-Wht, Gnd-Blk*} <br/>
+Wire |English |Chinese |Simplified	
+---- |------- |------- |---------- 
+Vcc	 |White		|白色的	 |白色的	
+Gnd	 |Black		|黑色的	 |黑色的	
+A/2  |Red			|紅色的	 |红色的	
+B/3	 |Green		|綠色的	 |绿色的 
+---  |Coloured| 色的
+
+Using rotary encoder HQK38H6-500N-G5-24 {Alternate wiring: *A-Grn, B-Wht, Vcc-Red, Gnd-Blk*} <br/>
+<sup>Note: On Pro Micro, J1 may require solder short to bypass diode/regulator, so rotary encoder electronics receive full 5V USB source.</sup> <br/>
+Wire |English |Chinese |Simplified	
+---- |------- |------- |---------- 
+Vcc  |Red			|紅色的	 |红色的	
+Gnd	 |Black		|黑色的	 |黑色的	
+A/2	 |White		|白色的	 |白色的	
+B/3	 |Green		|綠色的	 |绿色的 
+---  |Coloured| 色的
+
 Buttons 1-6(turned CW 'S-pattern'), plus 9-select(coin), and 10-start(player)<br/>
 
 Pin |Data |Button/wire  |Code  
 --- |---- |------------ |----  
-2   |D2   |X<sub>A</sub> spinner - Red |PinA  
-3   |D3   |X<sub>B</sub> spinner - Green |PinB  
+2   |D2   |X<sub>A</sub> spinner -  |PinA  
+3   |D3   |X<sub>B</sub> spinner -  |PinB  
 4   |D4   |Button 1 - X
 5   |D5   |Button 2 - A
 6   |D6   |Button 3 - B
@@ -76,8 +96,8 @@ Pin |Data |Button/wire  |Code
 9   |D9   |Button 6 - R
 10  |D10  |Button 9 - Select
 15  |D15  |Button 10 - Start
-Gnd |     |Gnd - Black/Blk
-Vcc |     |+5v - Red/White
+Gnd |     |Gnd - Black
+Vcc |     |+5v - Red
 16  |D16  |Switch: Axis Flip Opt.
 14  |D14  |Switch: Joystick Opt. <br/>
 
