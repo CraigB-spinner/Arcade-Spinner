@@ -64,6 +64,8 @@ It is still safer to limit unknown current flow.
 I advise you double check Vcc(5-24v power - Wht) and Gnd(Blk) wire colours as some chinese factories are colour blind. <br/>
 
 Using rotary encoder H38S360B 5-24V {wiring: *A-Red, B-Grn, Vcc-Wht, Gnd-Blk*} <br/>
+<sup>This rotary encoder was originally shipped in error with wrong specs of 360 ppr, resulting in sluggish/slower top spin.</sup> <br/>
+
 Wire |English |Chinese |Simplified	
 ---- |------- |------- |---------- 
 Vcc	 |White		|白色的	 |白色的	
@@ -74,6 +76,7 @@ B/3	 |Green		|綠色的	 |绿色的
 
 Using rotary encoder HQK38H6-500N-G5-24 {Alternate wiring: *A-Grn, B-Wht, Vcc-Red, Gnd-Blk*} <br/>
 <sup>Note: On Pro Micro, J1 may require solder short to bypass diode/regulator, so rotary encoder electronics receive full 5V USB source.</sup> <br/>
+
 Wire |English |Chinese |Simplified	
 ---- |------- |------- |---------- 
 Vcc  |Red			|紅色的	 |红色的	
