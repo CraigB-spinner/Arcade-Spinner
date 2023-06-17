@@ -83,8 +83,7 @@ Vcc  |Red			|紅色的	 |红色的
 Gnd	 |Black		|黑色的	 |黑色的	
 A/2	 |White		|白色的	 |白色的	
 B/3	 |Green		|綠色的	 |绿色的 
----  |Coloured| 色的  <br/>
-<br/>
+---  |Coloured| 色的  <br/><br/>
 
 Buttons 1-6(turned CW 'S-pattern'), plus 9-select(coin), and 10-start(player)<br/>
 
