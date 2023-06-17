@@ -63,7 +63,7 @@ Note: resistor used in series to limit current around 10mA (390Ω	- 470Ω) - [**
 It is still safer to limit unknown current flow.  
 I advise you double check Vcc(5-24v power) & Gnd wire colours as some chinese factories are colour blind. <br/>
 
-Using rotary encoder H38S360B 5-24V {wiring: *A-Red, B-Grn, Vcc-Wht, Gnd-Blk*} <br/>
+Using rotary encoder H38S360B, 5-24V {wiring: *A-Red, B-Grn, Vcc-Wht, Gnd-Blk*} <br/>
 <sup>This rotary encoder was originally shipped in error with wrong specs of 360 ppr, resulting in sluggish/slower top spin.</sup> <br/>
 
 Wire |English |Chinese |Simplified	
