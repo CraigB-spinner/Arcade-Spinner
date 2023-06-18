@@ -58,7 +58,7 @@ I advise you double check Vcc(5-24v power) & Gnd wire colours as some chinese fa
 <sub>DC Current per I/O Pin ………………………………. max 40.0 mA</sub>  
 <sup>DC Current VCC and GND Pins …………………. max 200.0 mA</sup>  
 Note: resistor used in series to limit current around 10mA - [**Pop goes the Triode**](x_file.md)  
-<sup>22.7mA w/ 220Ω, 18.5mA w/ 270Ω, 15.2mA w/ 330Ω, 12.8mA w/ 390Ω, 10.6mA w/ 470Ω</sup> <br/>
+<sup>Different currents = 5V / RΩ → 22.7mA (220Ω), 18.5mA (270Ω), 15.2mA (330Ω), 12.8mA (390Ω), 10.6mA (470Ω)</sup> <br/>
 Heed the manufacture's warning (Atmel Corp. now Microchip) and never short a pin to Gnd or Vcc. It's safer to limit unknown current flow.<br/>
 <sup>I have used an USB meter that contradicts any major current change when input pins are pulled high internally by ATmega32U4 MCU and shorted to Gnd.</sup><BR/>
 
