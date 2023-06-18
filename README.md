@@ -73,7 +73,7 @@ A/2  |Red			|紅色的	 |红色的
 B/3	 |Green		|綠色的	 |绿色的 
 ---  |Coloured| 色的  <br/>
 
-<br/>Using rotary encoder HQK38H6-500N-G5-24 {Alternate wiring: *A-Grn, B-Wht, Vcc-Red, Gnd-Blk*} <br/>
+<br/>Using rotary encoder HQK38H6-600N-G5-24 {Alternate wiring: *A-Grn, B-Wht, Vcc-Red, Gnd-Blk*} <br/>
 <sup>Note: On Pro Micro, J1 may require solder short to bypass diode/regulator, so rotary encoder electronics receive full 5V USB source.</sup> <br/>
 
 Wire |English |Chinese |Simplified	
