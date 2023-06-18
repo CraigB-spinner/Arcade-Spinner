@@ -53,8 +53,7 @@ This device will be detected as both mouse and gamepad/joystick. RetroPie requir
 
 **Extra info:**<br/>
 Wiring: [See diagram](Pics/Spinner%20Sketch_bb.jpg)<br/>
-Vcc (+5V) and Gnd<br/>
-Spinner A & B rotary output wires red and green. [see picture](Pics/Inside%20guts%20of%20spinner.jpg) <br/>
+Vcc (+5V) and Gnd, Spinner A & B rotary output wires red and green. [see picture](Pics/Inside%20guts%20of%20spinner.jpg) <br/>
 I advise you double check Vcc(5-24v power) & Gnd wire colours as some chinese factories are colour blind. <br/>
 <sub>DC Current per I/O Pin ………………………………. max 40.0 mA</sub>  
 <sup>DC Current VCC and GND Pins …………………. max 200.0 mA</sup>  
