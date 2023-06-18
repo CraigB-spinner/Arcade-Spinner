@@ -55,13 +55,13 @@ This device will be detected as both mouse and gamepad/joystick. RetroPie requir
 Wiring: [See diagram](Pics/Spinner%20Sketch_bb.jpg)<br/>
 Vcc (+5V) and Gnd<br/>
 Spinner A & B rotary output wires red and green. [see picture](Pics/Inside%20guts%20of%20spinner.jpg) <br/>
+I advise you double check Vcc(5-24v power) & Gnd wire colours as some chinese factories are colour blind. <br/>
 <sub>DC Current per I/O Pin ………………………………. max 40.0 mA</sub>  
 <sup>DC Current VCC and GND Pins …………………. max 200.0 mA</sup>  
-Note: resistor used in series to limit current around 10mA (390Ω	- 470Ω) - [**Pop goes the Triode**](x_file.md)  
-<sub>Heed the manufacture's warning (Atmel Corp. now Microchip) and never short a pin to Gnd or Vcc. I have used an USB meter that</sub>  
-<sup>contradicts any major current change when input pins are pulled high internally by ATmega32U4 MCU and later shorted to Gnd.</sup><BR/>
-It is still safer to limit unknown current flow.  
-I advise you double check Vcc(5-24v power) & Gnd wire colours as some chinese factories are colour blind. <br/>
+Note: resistor used in series to limit current around 10mA - [**Pop goes the Triode**](x_file.md)  
+<sup>22.7mA w/ 220Ω, 18.5mA w/ 270Ω, 15.2mA w/ 330Ω, 12.8mA w/ 390Ω, 10.6mA w/ 470Ω</sup> <br/>
+Heed the manufacture's warning (Atmel Corp. now Microchip) and never short a pin to Gnd or Vcc. It's safer to limit unknown current flow.<br/>
+<sup>I have used an USB meter that contradicts any major current change when input pins are pulled high internally by ATmega32U4 MCU and shorted to Gnd.</sup><BR/>
 
 Using rotary encoder H38S360B, 5-24V {wiring: *A-Red, B-Grn, Vcc-Wht, Gnd-Blk*} <br/>
 <sup>This rotary encoder was originally shipped in error with wrong specs of 360 ppr, resulting in sluggish/slower top spin.</sup> <br/>
