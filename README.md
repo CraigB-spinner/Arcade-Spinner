@@ -122,6 +122,9 @@ There are five versions of code: Pick your code to use
 - Special Mouse vari-SpinSpeed version - 6 +2 +1 buttons  
   - [Spinner_6-Button-MiSTer.ino](Spinner_6-Button-MiSTer.ino)<br/>
 
+- Special Debug error/code on Spinner with invalid Quadrature signals  
+  - [Spinner_Debug.ino](Spinner_Debug.ino)<br/>
+
 <sub>1. Use of TTP223 Capacitive Touch switches to control special functions: the 
 "[Touch Switches](Pics/Double%20Touch.jpg)"   
 Note: Invert the Touch I/O state by shorting [contact A to Vcc](Pics/TTP223B_chip_side.jpg), and/or contact B to activate on/off toggle mode.</sub>  
