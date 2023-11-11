@@ -122,7 +122,7 @@ There are five versions of code: Pick your code to use
 - Special Mouse vari-SpinSpeed version - 6 +2 +1 buttons  
   - [Spinner_6-Button-MiSTer.ino](Spinner_6-Button-MiSTer.ino)<br/>
 
-- Special Debug error/code on Spinner with invalid Quadrature signals  
+- Special Debug code - Spinner Error with invalid Quadrature signals  
   - [Spinner_Debug.ino](Spinner_Debug.ino)<br/>
 
 <sub>1. Use of TTP223 Capacitive Touch switches to control special functions: the 
