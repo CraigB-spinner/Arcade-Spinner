@@ -28,6 +28,7 @@
 *    or failure to power with +5V and Gnd through wires
 *    or bad voltage drop to wires or insufficient USB power to load
 *    will result in improper states (atleast 3.5V required for high state).
+*    ATmega32U4 Lo(max) 0.9V, Hi(min) 1.9V but rotary encoder is more sensitive.
 *    Rotary encoder may require more voltage closer to 5V to operate.
 *    8 invalid quadrature signals will trigger sporadic error messages.
 *    There must be atleast a minimal voltage supply to the rotary encoder 
@@ -120,7 +121,7 @@ void pinChange() {
   //Shift left 2 bits: 00AB <- AB00 to store current state as previous state.
   int comboQuadratureX  = (prevQuadratureX << 2) | currQuadratureX; 
 
-//Rotate to the right, Clockwise
+//Rotate to the right, Clockwise (2, 4, 11, 13) 
   //State 00AB, A leads B. A0 -> AB -> 0B -> 00 0b0010 0b1011 0b1101 0b0100
   if(comboQuadratureX == 0b0010 || comboQuadratureX == 0b1011 ||
      comboQuadratureX == 0b1101 || comboQuadratureX == 0b0100) 
@@ -129,7 +130,7 @@ void pinChange() {
      rotPosn++; 
     #endif 
     }
-  //Rotate to the left, Counter Clockwise
+  //Rotate to the left, Counter Clockwise (1, 7, 8, 14) 
   //State 00AB, B leads A. 0B -> AB -> A0 -> 00 0b0001 0b0111 0b1110 0b1000
   if(comboQuadratureX == 0b0001 || comboQuadratureX == 0b0111 ||
      comboQuadratureX == 0b1110 || comboQuadratureX == 0b1000) 
@@ -139,7 +140,7 @@ void pinChange() {
     #endif 
     }
     
-  //Not Rotate to right or left - invalid states
+  //Not Rotate to right or left - invalid states (0, 3, 5, 6, 9, 10, 12, 15)
   if(comboQuadratureX == 0b0000 || comboQuadratureX == 0b0011 || 
      comboQuadratureX == 0b0101 || comboQuadratureX == 0b0110 || 
      comboQuadratureX == 0b1001 || comboQuadratureX == 0b1010 || 
@@ -147,7 +148,9 @@ void pinChange() {
   #ifdef TEST
     Serial.print("Cnt: ");
     Serial.print(rotPosn);  
-    Serial.println(" -- Error on a/b or low voltage under 3.5V");
+    Serial.print(" -- Error on a/b or low voltage --- ");
+    Serial.print(comboQuadratureX);  
+    Serial.println(" -- ");  
   #endif
   }
   else 
