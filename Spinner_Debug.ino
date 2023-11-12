@@ -141,7 +141,9 @@ void pinChange() {
     }
     
   //Not Rotate to right or left - invalid states (0, 3, 5, 6, 9, 10, 12, 15)
-  if(comboQuadratureX == 0b0000 || comboQuadratureX == 0b0011 || 
+  //non-gray code transition current to previous 0011, 1100, 0110, 1001  
+  //No change identical state current to previous 0000, 1111, 0101, 1010  
+    if(comboQuadratureX == 0b0000 || comboQuadratureX == 0b0011 || 
      comboQuadratureX == 0b0101 || comboQuadratureX == 0b0110 || 
      comboQuadratureX == 0b1001 || comboQuadratureX == 0b1010 || 
      comboQuadratureX == 0b1100 || comboQuadratureX == 0b1111){  
