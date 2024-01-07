@@ -1,6 +1,5 @@
 ## **Arcade-Spinner** 
 Arcade Spinner version 2 - based off earlier Spinner <br/><br/>
-
 [![Spinner](Pics/IMG_3830.jpg)](Pics/IMG_3830a.jpg)  
 **Using an Arduino Pro Micro - DIY Spinner Controller, plus affordable Rotary Encoder**  
 I decided to post my version of code including 'compiler control directive code' for rotary encoder (spinner) movement, and addition of extra buttons that a standard fight box had pre-configured cut holes (6-30mm & 2-24mm). The code works with Arduino Pro Micro style boards made by clone manufacturers using the Atmel ATmega32U4 MCU with native USB HID support. The original 2019 code was posted by 'jmtw000'. In time, Joe's code mutated to be used with Arduino Micro, Adafruit Itsy Bitsy, and other style boards that have extra pinouts unused by status LEDs. You will not find pins 11, 12, and 13 (also SS, 3V, Aref, A4, A5 & 2-NCs) on an Arduino [Pro Micro](Pics/Arduino%20Pro%20Micro%20Atmega32u4.jpg) board (length saving of 0.66") but pins 14, 15, and 16 (MISO/SCLK/MOSI). They appear to be mapped to different ATMega Portx bits. <br/>
