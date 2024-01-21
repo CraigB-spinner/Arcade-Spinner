@@ -14,7 +14,8 @@ Here are some brandname Arduino boards:
 **Dec. 11/20:**  Uploaded new code for Mouse only Spinner operation. Note: all buttons can be inactivated for Spinner-Only operation.  
 **Dec. 16/20:**  Uploaded new code for override Joystick directions mod (using buttons for menu)  
 **Dec. 11/22:**  Uploaded new code for Mouse only Spinner operation. (Stand alone Arcade Spinner - no LCR mouse or joystick buttons)  
-**Dec. 20/22:**  Uploaded new code for Mouse vari-SpinSpeed Spinner (can be used in MiSTer FPGA Cores where device too sensitive)<br/>
+**Dec. 20/22:**  Uploaded new code for Mouse vari-SpinSpeed Spinner (can be used in MiSTer FPGA Cores where device too sensitive)  
+**Nov.  2023:**  Uploaded debug code to diagnose wire connections (<sub>Need +5V/Gnd/A or B for error message, power/voltage dropout issues & non-movement</sub>)<br/>
 
 This project uses an Arduino Pro Micro clone, arcade spinner, with 8 buttons (up to 10). It maybe used with MAME or any other emulator which can use the mouse X-axis as a paddle/spinner controller. Code should work on any board using an ATmega32U4 as long as port pins are mapped to same “digital pins” as Pro Micro. The DIY spinner was created as a cheaper alternative to commercially available devices. It works well with ball and paddle games, like Arkanoid, ever popular shooter Tempest, driving game like Pitstop and many other non-joystick controller games.
 
