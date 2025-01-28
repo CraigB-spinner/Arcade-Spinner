@@ -38,6 +38,16 @@ To construct this, you will need a 2-phase rotary encoder which can operate at 5
 [](https://www.amazon.ca/gp/product/B07HRS9BFK/ref=ppx_yo_dt_b_asin_image_o01_s00?ie=UTF8&psc=1) 
 [<sub>1</sub>](/Pics/Fightbox.jpg) (convenient plastic fightstick box)<br/><br/>
 
+**How does a Spinner work**  
+Simple explaination, a spinner is a digital rotary encoder of either x or y axis, acting as quadrature input device. Turning the spinner knob by hand directly twists/turns the rotary encoder. A rotary encoder have dual A & B phases with low/high or high/low signal transistions. One phase will always follow another phase due to a physical offset with a complete cycle producing 4 pulses (A<sub>L→H</sub>, B<sub>L→H</sub>, A<sub>H→L</sub>, B<sub>H→L</sub>, repeat) or quadrature signal. Only two temperal AB states (before/after) require capturing of AB or BA signals to decipher eight valid sequences out of sixteen total combinations. Two sets of four will indicate clockwise or counter-clockwise movement. A signal of AA, BB or similar will suggest invalid transitions or bounce states and should be ignored.  
+clockwise   (A<sub>L→H</sub>, B<sub>L→H</sub>, A<sub>H→L</sub>, B<sub>H→L</sub>)  
+A<sub>L→H</sub> **:** A<sub>L</sub>B<sub>L</sub>A<sub>H</sub>B<sub>L</sub>, B<sub>L→H</sub> **:** A<sub>H</sub>B<sub>L</sub>A<sub>H</sub>B<sub>H</sub>, 
+A<sub>H→L</sub> **:** A<sub>H</sub>B<sub>H</sub>A<sub>L</sub>B<sub>H</sub>, B<sub>H→L</sub> **:** A<sub>L</sub>B<sub>H</sub>A<sub>L</sub>B<sub>L</sub>  
+counter-clockwise (B<sub>L→H</sub>, A<sub>L→H</sub>, B<sub>H→L</sub>, A<sub>H→L</sub>)  
+B<sub>L→H</sub> **:** A<sub>L</sub>B<sub>L</sub>A<sub>L</sub>B<sub>H</sub>, A<sub>L→H</sub> **:** A<sub>L</sub>B<sub>H</sub>A<sub>H</sub>B<sub>H</sub>,
+B<sub>H→L</sub> **:** A<sub>H</sub>B<sub>H</sub>A<sub>H</sub>B<sub>L</sub>, A<sub>H→L</sub> **:** A<sub>H</sub>B<sub>L</sub>A<sub>L</sub>B<sub>L</sub> 
+<br/><br/>
+
 You will need Arduino joystick library at: [https://github.com/MHeironimus/ArduinoJoystickLibrary](https://github.com/MHeironimus/ArduinoJoystickLibrary) <br/>
 Matthew Heironimus joystick code: [Joystick.cpp](https://github.com/MHeironimus/ArduinoJoystickLibrary/blob/master/src/Joystick.cpp) & 
 [Joystick.h](https://github.com/MHeironimus/ArduinoJoystickLibrary/blob/master/src/Joystick.h) or 
