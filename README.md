@@ -135,7 +135,7 @@ There are five versions of code: Pick your code to use
   - [Spinner_6-Button-MiSTer.ino](Spinner_6-Button-MiSTer.ino)<br/>
 - Standard Mouse and Joystick buttons version - Ratio (non 300/600/1200ppr but eg.360ppr) 
   - [Spinner_8-Button-Ratio.ino](Spinner_8-Button-Ratio.ino)<br/>
-  
+  - [Spinner_8-Button-Ratio-mod.ino](Spinner_8-Button-Ratio-mod.ino)<br/>
 - Special Debug code - Spinner Error with invalid Quadrature signals  
   - [Spinner_Debug.ino](Spinner_Debug.ino)<br/>
 
