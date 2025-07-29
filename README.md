@@ -138,14 +138,14 @@ There are five versions of code: Pick your code to use
   - [Spinner_6-Button-MiSTer.ino](Spinner_6-Button-MiSTer.ino)<br/>
 - Standard Mouse and Joystick buttons version - Ratio (non 300/600/1200ppr but eg.360ppr) 
   - [Spinner_8-Button-Ratio.ino](Spinner_8-Button-Ratio.ino)<br/>
-  - [360 Ratio leonardo.hex](/Hex_files/360/Spinner_8-Button-Ratio-360.ino.leonardo.hex)<br/>
-    [360 Ratio leonardo & BL.hex](/Hex_files/360/Spinner_8-Button-Ratio-360.ino.with_bootloader.leonardo.hex))<br/>
-    [360 Ratio Pro Micro.hex](/Hex_Files/360/Spinner_8-Button-Ratio-360.ino.promicro.hex)<br/>
-    [360 Ratio Pro Micro & BL.hex](/Hex_Files/360/Spinner_8-Button-Ratio-360.ino.with_bootloader.promicro.hex)<br/>
-    [400 Ratio leonardo.hex](/Hex_files/400/Spinner_8-Button-Ratio-400.ino.leonardo.hex)<br/>
-    [400 Ratio leonardo & BL.hex](/Hex_files/400/Spinner_8-Button-Ratio-400.ino.with_bootloader.leonardo.hex))<br/>
-    [400 Ratio Pro Micro.hex](/Hex_Files/400/Spinner_8-Button-Ratio-400.ino.promicro.hex)<br/>
-    [400 Ratio Pro Micro & BL.hex](/Hex_Files/400/Spinner_8-Button-Ratio-400.ino.with_bootloader.promicro.hex)<br/>
+  - [360 Ratio leonardo.hex](Hex_files/360/Spinner_8-Button-Ratio-360.ino.leonardo.hex)<br/>
+    [360 Ratio leonardo & BL.hex](Hex_files/360/Spinner_8-Button-Ratio-360.ino.with_bootloader.leonardo.hex))<br/>
+    [360 Ratio Pro Micro.hex](Hex_Files/360/Spinner_8-Button-Ratio-360.ino.promicro.hex)<br/>
+    [360 Ratio Pro Micro & BL.hex](Hex_Files/360/Spinner_8-Button-Ratio-360.ino.with_bootloader.promicro.hex)<br/>
+    [400 Ratio leonardo.hex](Hex_files/400/Spinner_8-Button-Ratio-400.ino.leonardo.hex)<br/>
+    [400 Ratio leonardo & BL.hex](Hex_files/400/Spinner_8-Button-Ratio-400.ino.with_bootloader.leonardo.hex))<br/>
+    [400 Ratio Pro Micro.hex](Hex_Files/400/Spinner_8-Button-Ratio-400.ino.promicro.hex)<br/>
+    [400 Ratio Pro Micro & BL.hex](Hex_Files/400/Spinner_8-Button-Ratio-400.ino.with_bootloader.promicro.hex)<br/>
   - [Spinner_8-Button-Ratio-mod.ino](Spinner_8-Button-Ratio-mod.ino)<br/>
 - Special Debug code - Spinner Error with invalid Quadrature signals  
   - [Spinner_Debug.ino](Spinner_Debug.ino)<br/>
